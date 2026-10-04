@@ -1,0 +1,35 @@
+.products-index-page__hero {
+  min-height: clamp(460px, 78vh, 650px);
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products-index-page__hero h1 {
+  font-family: inherit;
+  font-size: clamp(48px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.products-index-page__breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.products-index-page__breadcrumb a {
+  color: #d2bd8b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.products-index-page__breadcrumb a:hover { color: #fff; }
+
+@media (max-width: 800px) {
+  .products-index-page__hero { min-height: 420px; }
+}

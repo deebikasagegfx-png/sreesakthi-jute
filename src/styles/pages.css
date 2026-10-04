@@ -1,0 +1,25 @@
+.page-heading { padding: 67px 9.2% 55px; background: #eee9dc; }
+.page-heading .eyebrow { margin-bottom: 15px; }
+.page-heading h1 { margin: 0; font-size: clamp(50px, 7vw, 91px); line-height: .99; }
+.page-heading h1 em { color: var(--green); }
+.page-heading > p:last-child { margin: 18px 0 0; color: #687066; font-size: 12px; line-height: 1.7; }
+.products-page-heading { min-height: 460px; display: flex; flex-direction: column; justify-content: center; position: relative; isolation: isolate; overflow: hidden; background-color: #263b30; background-image: none; }
+.products-page-heading::before { position: absolute; z-index: 0; inset: 0; background-image: linear-gradient(90deg, rgba(20,39,30,.58), rgba(20,39,30,.3)), url('../assets/images/productimg.jpg'); background-position: center, center 55%; background-size: cover, cover; background-repeat: no-repeat; content: ''; animation: product-heading-bg-zoom 1.5s cubic-bezier(.2,.7,.2,1) both; }
+.products-page-heading > * { position: relative; z-index: 1; }
+.products-page-heading .eyebrow, .products-page-heading h1, .products-page-heading > p:last-child { color: #fff; }
+.products-page-heading h1 em { color: #e4c28a; }
+@keyframes product-heading-bg-zoom { from { transform: scale(1); } to { transform: scale(1.12); } }
+@media (max-width: 800px) { .products-page-heading { min-height: 420px; } }
+@media (prefers-reduced-motion: reduce) { .products-page-heading::before { animation: none; transform: scale(1.08); } }
+.inner-page > .intro-section, .inner-page > .process-section, .inner-page > .team-section, .inner-page > .mission-section, .inner-page > .green-jute-section { scroll-margin-top: 80px; }
+.inner-page .intro-section { padding-top: 51px; }
+.privacy-page { min-height: 70vh; }
+.policy-copy { max-width: 820px; padding: 46px 9.2% 90px; }
+.policy-copy h2 { margin: 0 0 9px; font-family: 'Fraunces', Georgia, serif; font-size: 25px; font-weight: 500; }
+.policy-copy p { margin: 0 0 30px; color: #62695f; font-size: 12px; line-height: 1.85; }
+.page-not-found { min-height: 60vh; display: flex; align-items: start; flex-direction: column; justify-content: center; padding: 60px 10%; }
+.page-not-found h1 { margin: 0 0 25px; font-size: clamp(52px, 8vw, 90px); line-height: .98; }
+.page-not-found h1 em { color: var(--orange); }
+.route-loader { min-height: 55vh; display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--green); font-size: 11px; }
+.route-loader span { width: 17px; height: 17px; border: 2px solid #d5d9ce; border-top-color: var(--green); border-radius: 50%; animation: loader-spin .7s linear infinite; }
+@keyframes loader-spin { to { transform: rotate(360deg); } }

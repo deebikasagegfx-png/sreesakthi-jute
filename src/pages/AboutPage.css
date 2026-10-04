@@ -1,0 +1,120 @@
+.about-page { overflow: hidden; background: #fbfaf6; color: #26382d; }
+.about-page-heading { min-height: 340px; position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; padding: 56px 24px; color: white; text-align: center; background: #263b30; }
+.about-page-heading::before { position: absolute; z-index: 0; inset: 0; background: linear-gradient(90deg, rgba(27,43,34,.78), rgba(27,43,34,.4)), url('../assets/images/header-image2.jpg') center 53% / cover no-repeat; content: ''; transform: scale(1.02); }
+.about-page-heading > * { position: relative; z-index: 1; }
+.about-hero-kicker { margin: 0 0 12px; color: #e4c28a; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.about-page-heading h1 { margin: 0 0 13px; color: white; font-size: clamp(48px, 6vw, 76px); line-height: 1.05; }
+.about-breadcrumb { margin: 0; color: #fff; font-size: 13px; }
+.about-breadcrumb a { color: #ecd3a7; }
+.about-scroll-link { width: 38px; height: 38px; position: absolute; bottom: 19px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; color: white; }
+.about-company, .about-sustainability, .about-products, .about-journey, .about-projects { width: min(1240px, calc(100% - 10%)); margin: 0 auto; }
+.about-company { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); align-items: center; gap: clamp(45px, 8vw, 105px); padding: 92px 0 100px; }
+.about-company-image { min-width: 0; position: relative; padding: 0 24px 24px 0; }
+.about-company-image::after { position: absolute; z-index: 0; right: 0; bottom: 0; width: 72%; height: 72%; background: #e8e2d2; content: ''; }
+.about-company-image img { width: 100%; height: clamp(360px, 39vw, 500px); position: relative; z-index: 1; object-fit: cover; object-position: center; }
+.about-experience { min-width: 147px; position: absolute; z-index: 2; right: -12px; top: 28px; display: flex; align-items: center; gap: 10px; padding: 13px 16px; background: #f7f5ed; box-shadow: 0 9px 24px #26382d20; }
+.about-experience strong { color: #a86b39; font-family: 'Fraunces', Georgia, serif; font-size: 33px; font-weight: 500; }
+.about-experience span { max-width: 70px; font-size: 10px; line-height: 1.35; text-transform: uppercase; letter-spacing: .08em; }
+.about-company-copy { max-width: 600px; }
+.about-kicker { margin: 0 0 14px; color: #a86b39; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.about-company-copy h2 { margin: 0 0 19px; font-size: clamp(38px, 4.5vw, 59px); line-height: 1.05; letter-spacing: -.035em; }
+.about-company-copy h3 { margin: 0 0 13px; color: #45634a; font-size: 17px; font-weight: 700; }
+.about-company-copy > p:last-child { margin: 0; color: #626c60; font-size: 14px; line-height: 1.9; }
+
+.about-sustainability { width: 100%; max-width: none; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .88fr); align-items: stretch; gap: 6%; padding: 76px max(5%, calc((100% - 1240px) / 2)); background: #eff1e8; }
+.about-sustainability-copy { align-self: center; }
+.about-sustainability-copy h2 { max-width: 560px; margin: 0 0 34px; font-size: clamp(39px, 4.4vw, 58px); line-height: 1.08; }
+.about-sustainability-copy h2 em { color: #45634a; }
+.about-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 0; padding: 0; list-style: none; }
+.about-benefits li { min-height: 111px; display: flex; align-items: flex-start; gap: 12px; padding: 18px 16px; background: rgba(255,255,255,.74); }
+.about-benefits li > span { width: 33px; height: 33px; flex: 0 0 33px; display: grid; place-items: center; border-radius: 50%; color: #45634a; background: #e9efe3; }
+.about-benefits h3 { margin: 3px 0 0; color: #34473a; font-size: 12px; line-height: 1.55; text-transform: uppercase; letter-spacing: .025em; }
+.about-sustainability-image { min-height: 400px; position: relative; overflow: hidden; margin: 0; background: #d8d8c7; }
+.about-sustainability-image img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; }
+.about-sustainability-image figcaption { position: absolute; right: 14px; bottom: 14px; left: 14px; padding: 13px 15px; color: #26382d; background: rgba(251,250,246,.9); font-family: 'Fraunces', Georgia, serif; font-size: 16px; }
+
+.about-products { padding: 94px 0 99px; }
+.about-section-heading { margin: 0 0 36px; }
+.about-section-heading h2 { margin: 0; font-size: clamp(38px, 4.8vw, 60px); line-height: 1.07; }
+.about-section-heading > p:last-child:not(.about-kicker) { max-width: 430px; margin: 13px 0 0; color: #687066; font-size: 13px; line-height: 1.7; }
+.about-products-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; }
+.about-product-card { min-width: 0; grid-column: span 2; }
+.about-product-card:nth-child(4) { grid-column: 2 / span 2; }
+.about-product-card:nth-child(5) { grid-column: 4 / span 2; }
+.about-product-image { height: clamp(210px, 26vw, 325px); position: relative; overflow: hidden; background: #eee9dc; }
+.about-product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.about-product-card:hover .about-product-image img { transform: scale(1.04); }
+.about-product-image span { position: absolute; top: 11px; left: 11px; padding: 6px 8px; color: #26382d; background: #fbfaf6; font-size: 10px; }
+.about-product-card h3 { margin: 14px 0 0; font-family: 'Fraunces', Georgia, serif; font-size: 20px; font-weight: 500; }
+
+.about-journey { max-width: none; width: 100%; padding: 82px max(5%, calc((100% - 1240px) / 2)) 91px; background: #e9e5d8; }
+.about-journey .about-section-heading { margin-bottom: 35px; }
+.about-journey-grid { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 0; padding: 0; list-style: none; }
+.about-journey-grid::before { position: absolute; top: 17px; right: 10%; left: 10%; border-top: 1px solid rgba(38,56,45,.25); content: ''; }
+.about-journey-step { min-width: 0; position: relative; }
+.about-journey-image { height: clamp(170px, 18vw, 230px); position: relative; overflow: hidden; background: #d3cdbc; }
+.about-journey-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.about-journey-step:hover img { transform: scale(1.04); }
+.about-journey-image span { position: absolute; right: 10px; bottom: 9px; color: white; font-family: 'Fraunces', Georgia, serif; font-size: 27px; text-shadow: 0 1px 6px #0008; }
+.about-journey-step h3 { margin: 14px 0 0; font-family: 'Fraunces', Georgia, serif; font-size: 19px; font-weight: 500; }
+
+.about-projects { padding: 90px 0 104px; }
+.about-projects .about-section-heading { margin-bottom: 32px; }
+.about-project-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 17px; }
+.about-project-gallery figure { min-height: 125px; display: grid; place-items: center; overflow: hidden; margin: 0; padding: 18px; background: #f1eee6; }
+.about-project-gallery img { width: 100%; height: 120px; object-fit: contain; transition: transform .3s ease; }
+.about-project-gallery figure:hover img { transform: scale(1.04); }
+
+@media (max-width: 800px) {
+  .about-company, .about-sustainability { gap: 36px; }
+  .about-company { width: calc(100% - 9%); padding: 68px 0 75px; }
+  .about-company-copy h2 { font-size: clamp(34px, 5vw, 46px); }
+  .about-company-copy > p:last-child { font-size: 13px; }
+  .about-sustainability { padding: 60px 4.5%; }
+  .about-sustainability-image { min-height: 360px; }
+  .about-benefits { grid-template-columns: 1fr; gap: 8px; }
+  .about-benefits li { min-height: auto; padding: 12px; }
+  .about-products { padding: 72px 0 78px; }
+  .about-products-grid { gap: 16px; }
+  .about-product-card { grid-column: span 3; }
+  .about-product-card:nth-child(4) { grid-column: 1 / span 3; }
+  .about-product-card:nth-child(5) { grid-column: 4 / span 3; }
+  .about-product-image { height: clamp(210px, 34vw, 290px); }
+  .about-journey { padding: 66px 4.5% 73px; }
+  .about-journey-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
+  .about-journey-grid::before { display: none; }
+  .about-journey-image { height: clamp(180px, 30vw, 250px); }
+  .about-projects { padding: 72px 0 80px; }
+  .about-project-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+}
+
+@media (max-width: 580px) {
+  .about-page-heading { min-height: 285px; }
+  .about-company, .about-sustainability { grid-template-columns: 1fr; }
+  .about-company { width: calc(100% - 11%); gap: 35px; padding: 50px 0 58px; }
+  .about-company-image { padding: 0 15px 15px 0; }
+  .about-company-image img { height: min(105vw, 430px); }
+  .about-experience { right: -5px; top: 18px; }
+  .about-company-copy h2 { font-size: clamp(37px, 10vw, 49px); }
+  .about-sustainability { gap: 28px; padding: 52px 5.5%; }
+  .about-sustainability-copy h2 { margin-bottom: 24px; font-size: 39px; }
+  .about-benefits { grid-template-columns: 1fr; }
+  .about-sustainability-image { min-height: 290px; }
+  .about-products, .about-projects { width: calc(100% - 11%); padding: 58px 0 65px; }
+  .about-section-heading { margin-bottom: 27px; }
+  .about-section-heading h2 { font-size: 40px; }
+  .about-products-grid { grid-template-columns: 1fr; gap: 25px; }
+  .about-product-card, .about-product-card:nth-child(4), .about-product-card:nth-child(5) { grid-column: auto; }
+  .about-product-image { height: min(83vw, 350px); }
+  .about-journey { padding: 57px 5.5% 64px; }
+  .about-journey-grid { grid-template-columns: 1fr; gap: 24px; }
+  .about-journey-image { height: min(72vw, 340px); }
+  .about-journey-step h3 { margin-top: 10px; font-size: 20px; }
+  .about-project-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .about-project-gallery figure { min-height: 100px; padding: 10px; }
+  .about-project-gallery img { height: 92px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-product-image img, .about-journey-image img, .about-project-gallery img { transition: none; }
+}
