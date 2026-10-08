@@ -13,11 +13,11 @@ import Testimonials from '../components/Testimonials'
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <Hero />
       <ScrollReveal className="home-about-reveal"><About /></ScrollReveal>
       <ScrollReveal><MissionVision /></ScrollReveal>
-      <HomeProductCarousel />
+      <ScrollReveal className="home-products-reveal"><HomeProductCarousel /></ScrollReveal>
       <ScrollReveal className="home-sustainability-reveal"><SustainabilityFeature /></ScrollReveal>
       <ScrollReveal><ArchitectureShowcase /></ScrollReveal>
       <ScrollReveal><Team /></ScrollReveal>

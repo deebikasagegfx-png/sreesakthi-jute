@@ -69,7 +69,7 @@ export default function Navbar() {
 </div>
       </div>
       <header ref={menuAreaRef} className="site-header">
-       <Link className="brand" to="/#home" aria-label="Sree Sakthi Jute Bags home">
+       <Link className="brand" to="/" aria-label="Sree Sakthi Jute Bags home">
           <img src={images.logo} alt="Sree Sakthi Jute Bags" />
         </Link>
         
@@ -84,12 +84,13 @@ export default function Navbar() {
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
         <nav id="primary-navigation" className={menuOpen ? "main-nav is-open" : "main-nav"}>
-          <Link to="/#home" onClick={closeMenu}>Home</Link>
-          <Link to="/about" onClick={closeMenu}>About Us</Link>
+          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/about-us" onClick={closeMenu}>About Us</Link>
           <Link to="/products" onClick={closeMenu}>Products</Link>
           <Link to="/testimonials" onClick={closeMenu}>Testimonials</Link>
-          <Link to="/blogs" onClick={closeMenu}>Blogs</Link>
+          <Link to="/leading-jute-bag-manufacturers" onClick={closeMenu}>Blogs</Link>
           <Link to="/contact" onClick={closeMenu}>Contact</Link>
+          <Link className="nav-contact" to="/contact" onClick={closeMenu}>Get In Touch</Link>
         </nav>
         </header>
     </>

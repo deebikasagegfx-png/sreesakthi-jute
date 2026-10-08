@@ -5,7 +5,7 @@
 
 .home-product-carousel__heading {
   display: grid;
-  min-height: 108px;
+  min-height: 140px;
   place-items: center;
   padding: 20px 16px;
   background: #656e32;
@@ -16,60 +16,76 @@
 .home-product-carousel__heading h2 {
   margin: 0;
   font-family: inherit;
-  font-size: clamp(30px, 3vw, 39px);
+  font-size: clamp(30px, 2.8vw, 36px);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -.035em;
 }
 
 .home-product-carousel__body {
-  padding: 80px 20px 67px;
-  background: #ded5c6;
+  padding: 70px 20px 48px;
+  background: #f6f6f6;
 }
 
 .home-product-carousel__stage {
   position: relative;
-  width: min(100%, 1040px);
+  width: min(100%, 1380px);
   margin: 0 auto;
 }
 
 .home-product-carousel__viewport {
-  margin: 0 70px;
+  margin: 0 44px;
   overflow: hidden;
   touch-action: pan-y;
 }
 
-.home-product-carousel__track {
-  display: flex;
-  width: 100%;
-  transition: transform 650ms cubic-bezier(.22, .7, .25, 1);
-  will-change: transform;
-}
-
 .home-product-carousel__page {
   display: grid;
-  flex: 0 0 100%;
-  grid-template-columns: repeat(var(--home-carousel-visible-count), minmax(0, 240px));
-  justify-content: space-between;
+  grid-template-columns: repeat(var(--home-carousel-visible-count), minmax(0, 1fr));
+  justify-content: center;
   gap: 24px;
 }
 
 .home-product-carousel__card {
   min-width: 0;
+  width: min(100%, 260px);
+  justify-self: center;
+  padding: 0 0 16px;
+  background: #fff;
   text-align: center;
+  animation: home-product-card-in 360ms ease both;
+}
+
+@keyframes home-product-card-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .home-product-carousel__image {
   display: block;
   width: 100%;
   aspect-ratio: 240 / 296;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
   user-select: none;
+  transition: transform 300ms ease;
+}
+
+.home-product-carousel__image:hover { transform: scale(.96); }
+
+.scroll-reveal.is-visible .home-product-carousel__image {
+  animation: home-product-zoom-in 650ms cubic-bezier(.2, .7, .2, 1) both;
+  animation-delay: calc(var(--product-order) * 90ms);
+}
+
+@keyframes home-product-zoom-in {
+  from { opacity: 0; transform: scale(.86); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .home-product-carousel__name {
   margin: 19px 0 0;
-  color: #626d31;
+  color: #626b2c;
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -81,10 +97,10 @@
 .home-product-carousel__arrow {
   position: absolute;
   z-index: 1;
-  top: 148px;
+  top: 50%;
   display: grid;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   place-items: center;
   padding: 0;
   border: 0;
@@ -106,8 +122,8 @@
   outline-offset: 4px;
 }
 
-.home-product-carousel__arrow--previous { left: 22px; }
-.home-product-carousel__arrow--next { right: 22px; }
+.home-product-carousel__arrow--previous { left: 0; }
+.home-product-carousel__arrow--next { right: 0; }
 
 .home-product-carousel__dots {
   display: flex;
@@ -124,27 +140,23 @@
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: #aaa99d;
+  background: rgba(255, 255, 255, .58);
   cursor: pointer;
   transition: transform 180ms ease, background-color 180ms ease;
 }
 
 .home-product-carousel__dot.is-active {
-  background: #171711;
+  background: #fff;
   transform: scale(1.12);
 }
 
 @media (max-width: 940px) {
-  .home-product-carousel__body { padding: 62px 18px 54px; }
-  .home-product-carousel__viewport { margin-right: 55px; margin-left: 55px; }
-  .home-product-carousel__page { grid-template-columns: repeat(var(--home-carousel-visible-count), minmax(0, 240px)); }
-  .home-product-carousel__arrow { top: 148px; }
-  .home-product-carousel__arrow--previous { left: 9px; }
-  .home-product-carousel__arrow--next { right: 9px; }
+  .home-product-carousel__body { padding: 58px 18px 44px; }
+  .home-product-carousel__viewport { margin-right: 42px; margin-left: 42px; }
 }
 
 @media (max-width: 620px) {
-  .home-product-carousel__heading { min-height: 84px; }
+  .home-product-carousel__heading { min-height: 96px; }
   .home-product-carousel__body { padding: 36px 16px 36px; }
   .home-product-carousel__stage { width: min(100%, 370px); }
   .home-product-carousel__viewport { margin: 0 36px; }
@@ -158,7 +170,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-product-carousel__track,
+  .home-product-carousel__image,
   .home-product-carousel__arrow,
-  .home-product-carousel__dot { transition: none; }
+  .home-product-carousel__dot,
+  .home-product-carousel__card { transition: none; animation: none; }
+  .scroll-reveal.is-visible .home-product-carousel__image { animation: none; }
 }

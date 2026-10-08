@@ -1,4 +1,4 @@
-﻿import { ArrowLeft, ArrowUpRight } from 'lucide-react'
+import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import RelatedPostsAndComments from '../components/RelatedPostsAndComments'
 import materialFabricImage from '../assets/images/removesen1.jpg'
 import materialSwatchImage from '../assets/images/back-jute-fib.webp'
@@ -60,7 +60,7 @@ const faqs = [
 export default function MaterialArticlePage() {
   return (
     <main className="article-page source-article-page">
-      <a className="source-article-back" href="/blogs"><ArrowLeft size={15} /> All stories</a>
+      <a className="source-article-back" href="/leading-jute-bag-manufacturers"><ArrowLeft size={15} /> All stories</a>
       <div className="source-article">
         <h1>Who Are the Best Jute Bag Material Suppliers in India?</h1>
         <p className="source-article-byline">MATERIALS · SOURCING GUIDE</p>

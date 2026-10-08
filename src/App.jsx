@@ -1,10 +1,10 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react'
-import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom'
+import { BrowserRouter, Link, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { ArrowUpRight, X } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'
-import { images } from './assets/images'
 import SEOManager from './components/SEOManager'
 import { formErrorMessage, formSuccessMessage, submitWebsiteForm } from './utils/formSubmission'
 
@@ -24,10 +24,18 @@ const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'))
 const TestimonialsPage = lazy(() => import('./pages/TestimonialsPage'))
 const ProductsPage = lazy(() => import('./pages/ProductsPage'))
 const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage'))
+const SmallJuteBagsPage = lazy(() => import('./pages/SmallJuteBagsPage'))
 
 function ScrollManager() {
   const location = useLocation()
+  const navigate = useNavigate()
   const previousLocation = useRef(null)
+
+  useEffect(() => {
+    if (location.hash === '#home') {
+      navigate(`${location.pathname}${location.search}`, { replace: true })
+    }
+  }, [location.hash, location.pathname, location.search, navigate])
 
   useEffect(() => {
     const currentLocation = `${location.pathname}${location.hash}`
@@ -53,7 +61,13 @@ function NotFound() {
 }
 
 function LoadingScreen() {
-  return <div className="brand-splash" role="status" aria-label="Loading Sree Sakthi Jute Bags"><img src={images.logo} alt="Sree Sakthi Jute Bags" /></div>
+  return <div className="brand-splash" role="status" aria-label="Loading Sree Sakthi Jute Bags"><img src="/images/logobgremove.png" alt="Sree Sakthi Jute Bags" /></div>
+}
+
+function LegacyBlogRedirect() {
+  const location = useLocation()
+  const pathname = location.pathname.replace(/^\/blogs(?=\/|$)/, '/leading-jute-bag-manufacturers')
+  return <Navigate to={{ pathname, search: location.search, hash: location.hash }} replace />
 }
 
 function EnquiryPopup({ onClose }) {
@@ -179,15 +193,22 @@ export default function App() {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about" element={<Navigate to="/about-us" replace />} />
+          <Route path="/about-us" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:slug" element={<ProductDetailPage />} />
+          <Route path="/jute-fabric-wholesale-market" element={<ProductDetailPage />} />
+          <Route path="/wedding-jute-bags-for-return-gifts" element={<ProductDetailPage />} />
+          <Route path="/eco-friendly-jute-shopping-bags-wholesale" element={<ProductDetailPage />} />
+          <Route path="/small-jute-bags-wholesale" element={<SmallJuteBagsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/blogs/page/:page" element={<Blogs />} />
-          <Route path="/blogs/:slug" element={<BlogDetail />} />
+          <Route path="/leading-jute-bag-manufacturers" element={<Blogs />} />
+          <Route path="/leading-jute-bag-manufacturers/page/:page" element={<Blogs />} />
+          <Route path="/leading-jute-bag-manufacturers/:slug" element={<BlogDetail />} />
+          <Route path="/blogs" element={<LegacyBlogRedirect />} />
+          <Route path="/blogs/*" element={<LegacyBlogRedirect />} />
           <Route path="/why-choose-small-jute-bags-wholesale-business" element={<BlogArticlePage />} />
           <Route path="/complete-guide-to-choosing-eco-friendly-jute-bags" element={<EcoFriendlyArticlePage />} />
           <Route path="/who-are-the-best-jute-bag-material-suppliers" element={<MaterialArticlePage />} />
@@ -199,7 +220,7 @@ export default function App() {
         </Routes>
       </Suspense>
       <Footer />
-      <a className="whatsapp-float" href="https://wa.me/916381067678?text=Hello%2C%20I%27m%20interested%20in%20your%20jute%20bags." target="_blank" rel="noreferrer" aria-label="Chat with us on WhatsApp"><span>Chat with us</span><ArrowUpRight size={17} /></a>
+      <a className="whatsapp-float" href="https://wa.me/916381067678?text=Hello%2C%20I%27m%20interested%20in%20your%20jute%20bags." target="_blank" rel="noreferrer" aria-label="Need help? Chat with us on WhatsApp"><span className="whatsapp-float-prompt">Need Help?</span><span className="whatsapp-float-logo"><FaWhatsapp aria-hidden="true" /></span></a>
     </BrowserRouter>
   )
 }

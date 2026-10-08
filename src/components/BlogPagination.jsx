@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 function pagePath(page) {
-  return page === 1 ? '/blogs' : `/blogs/page/${page}`
+  return page === 1 ? '/leading-jute-bag-manufacturers' : `/leading-jute-bag-manufacturers/page/${page}`
 }
 
 export default function BlogPagination({ page, totalPages }) {

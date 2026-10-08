@@ -34,8 +34,27 @@
 .testimonial-wedding-photo figcaption { display: flex; flex-direction: column; align-items: flex-start; gap: 15px; padding: 24px 18px; color: var(--testimonial-green); font-family: 'Fraunces', Georgia, serif; font-size: clamp(27px, 3.5vw, 43px); letter-spacing: -.025em; line-height: 1.08; }
 .testimonial-wedding-photo figcaption::before { width: 48px; height: 3px; border-radius: 3px; background: var(--testimonial-gold); content: ''; }
 .testimonial-wedding-section { position: relative; display: grid; place-items: center; overflow: hidden; padding: 70px 8% 90px; background: radial-gradient(ellipse at 86% 46%, rgba(182,122,69,.13), transparent 26%), linear-gradient(135deg, #f2eee4, #fbfaf6 52%, #eee8dc); }
-.testimonial-wedding-photo { z-index: 1; width: min(100%, 560px); }
+.testimonial-wedding-section { grid-template-columns: .9fr 1.1fr; place-items: stretch; padding: 8px 12% 56px; background: #fff; }
+.testimonial-wedding-title { grid-column: 2; margin: 0; color: #171717; font-family: Arial, sans-serif; font-size: clamp(38px, 4.2vw, 50px); font-weight: 700; letter-spacing: -.025em; line-height: 1.15; }
 .testimonial-reviews-section { margin-bottom: 48px; padding: 84px 9% 0; color: #243a30; background: radial-gradient(ellipse at 8% 5%, rgba(188,133,75,.13), transparent 33%), radial-gradient(ellipse at 92% 92%, rgba(94,124,81,.1), transparent 38%), linear-gradient(135deg, #f5f0e6 0%, #fffdf8 52%, #eee8dc 100%); }
+.testimonials-page .review-section { position: relative; min-height: 470px; padding: 88px 7% 40px; overflow: hidden; color: #fff; background: #b19b79; text-align: center; }
+.testimonials-page .review-section-title { width: fit-content; margin: 0 auto 32px; padding: 0 5px 13px; border-bottom: 1px solid #30291f; color: #1e1e1e; font-family: Arial, sans-serif; font-size: clamp(30px, 3.3vw, 46px); font-weight: 700; line-height: 1.15; }
+.testimonials-page .review-carousel { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 72px 30px; }
+.testimonials-page .review-grid { min-height: 220px; }
+.testimonials-page .review-card.is-active { width: 100%; min-height: 220px; display: flex; align-items: center; justify-content: center; flex-direction: column; margin: 0; padding: 0; border: 0; color: #fff; background: transparent; box-shadow: none; }
+.testimonials-page .review-quote { width: 100%; min-height: 0; margin: 0 auto 24px; color: #fff; font-family: 'Albert Sans', sans-serif; font-size: clamp(16px, 1.55vw, 20px); font-weight: 600; line-height: 1.55; text-align: center; }
+.testimonials-page .review-stars { margin-bottom: 15px; color: #ffd000; font-size: 20px; letter-spacing: 0; }
+.testimonials-page .review-author { justify-content: center; padding: 0; border: 0; }
+.testimonials-page .review-author p { flex: none; margin: 0; font-size: 15px; }
+.testimonials-page .review-author p strong { color: #1e1e1e; font-size: 15px; font-weight: 700; letter-spacing: .045em; text-transform: uppercase; }
+.testimonials-page .review-arrow { position: absolute; z-index: 1; top: 50%; display: grid; width: 44px; height: 44px; place-items: center; padding: 0; border: 0; color: #fff; background: transparent; cursor: pointer; transform: translateY(-50%); transition: opacity .2s, transform .2s; }
+.testimonials-page .review-arrow:hover { opacity: .75; transform: translateY(-50%) scale(1.12); }
+.testimonials-page .review-arrow:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.testimonials-page .review-arrow-previous { left: 0; }
+.testimonials-page .review-arrow-next { right: 0; }
+.testimonials-page .review-carousel-dots { position: static; margin-top: 0; }
+.testimonials-page .review-carousel-dots button { background: rgba(56,48,35,.32); }
+.testimonials-page .review-carousel-dots button.is-active { width: 8px; background: #1e1e1e; }
 .testimonial-reviews-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 35px; }
 .testimonial-reviews-heading .testimonials-eyebrow { color: #a66b3d; }
 .testimonial-reviews-heading h2 { margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(46px, 6vw, 72px); font-weight: 500; letter-spacing: -.04em; }
@@ -81,6 +100,16 @@
   .testimonial-mission::before { inset: 16px 4%; }
   .testimonial-mission-copy .testimonial-board-title { font-size: clamp(42px, 10vw, 62px); line-height: 1.12; }
   .testimonial-mission-copy .testimonial-board-heading { font-size: clamp(27px, 7vw, 36px); line-height: 1.2; }
+  .testimonial-wedding-section { grid-template-columns: 1fr; padding: 8px 8% 48px; }
+  .testimonial-wedding-title { grid-column: 1; font-size: clamp(34px, 8vw, 44px); }
+  .testimonials-page .review-section { min-height: 410px; padding: 78px 5% 30px; }
+  .testimonials-page .review-section-title { margin-bottom: 20px; font-size: 32px; }
+  .testimonials-page .review-carousel { padding: 0 34px 25px; }
+  .testimonials-page .review-grid, .testimonials-page .review-card.is-active { min-height: 260px; }
+  .testimonials-page .review-quote { margin-bottom: 20px; font-size: 16px; }
+  .testimonials-page .review-arrow { width: 32px; height: 40px; }
+  .testimonials-page .review-arrow svg { width: 20px; height: 20px; }
+  .testimonials-page .review-author p strong { font-size: 12px; }
   .testimonial-wedding-photo { grid-template-columns: 1fr; gap: 12px; }
   .testimonial-wedding-photo img { height: min(76vw, 370px); }
   .testimonial-wedding-photo figcaption { padding: 14px 7px 8px; font-size: clamp(26px, 7vw, 36px); }

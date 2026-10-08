@@ -1,10 +1,12 @@
 import { ArrowLeft, ArrowUpRight } from 'lucide-react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { products } from '../data/products'
 
 export default function ProductDetailPage() {
-  const { slug } = useParams()
-  const product = products.find((item) => item.slug === slug)
+  const { slug: routeSlug } = useParams()
+  const { pathname } = useLocation()
+  const slug = routeSlug || pathname.replace(/\/$/, '').split('/').pop()
+  const product = products.find((item) => item.slug === slug || item.route.split('/').filter(Boolean).at(-1) === slug)
 
   if (!product) {
     return <main className="product-detail-page"><p className="eyebrow">Product collection</p><h1>Collection not found</h1><Link className="product-back-link" to="/products"><ArrowLeft size={16} /> Back to all products</Link></main>
@@ -18,7 +20,7 @@ export default function ProductDetailPage() {
           <p className="eyebrow">Sree Sakthi Jute Bags · Our Products</p>
           <h1>{product.name}</h1>
           <p>{product.description}</p>
-          <a className="button button-dark" href={`/contact?product=${encodeURIComponent(product.name)}`}>Enquire about this collection <ArrowUpRight size={16} /></a>
+          <Link className="button button-dark" to={`/contact?product=${encodeURIComponent(product.name)}`}>Enquire about this collection <ArrowUpRight size={16} /></Link>
         </div>
         <img src={product.image} alt={product.name} />
       </section>

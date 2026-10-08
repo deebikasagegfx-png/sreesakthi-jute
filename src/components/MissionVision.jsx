@@ -7,7 +7,7 @@ export default function MissionVision() {
 
   return (
     <section className="green-jute-section" aria-labelledby="green-jute-title">
-      <h2 className="green-jute-title" id="green-jute-title">Best Jute Bag Manufacturers in Chennai</h2>
+      <h2 className="green-jute-title" id="green-jute-title">Best Jute Bag Manufacturers In Chennai</h2>
       <div className="green-jute-content">
         <div className="green-jute-copy">
           <h3>Go <span>Green</span> With Jute</h3>

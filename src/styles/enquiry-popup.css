@@ -5,7 +5,7 @@
   display: grid;
   place-items: center;
   padding: 24px;
-  background: #f7f5ed;
+  background: #000;
   animation: splash-fade-in .2s ease-out both;
 }
 .brand-splash img { width: clamp(170px, 28vw, 310px); max-height: 65vh; object-fit: contain; }

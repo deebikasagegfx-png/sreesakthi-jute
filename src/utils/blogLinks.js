@@ -2,23 +2,24 @@ const internalHost = /(^|\.)sreesakthijutebags\.in$/i
 
 const fixedRoutes = new Map([
   ['', '/'],
-  ['about-us', '/about'],
-  ['about', '/about'],
+  ['about-us', '/about-us'],
+  ['about', '/about-us'],
   ['contact', '/contact'],
   ['contact-us', '/contact'],
   ['products', '/products'],
   ['jute-bag-for-wedding', '/products/jute-wedding-bags'],
-  ['wedding-jute-bags-for-return-gifts', '/products/jute-wedding-bags'],
+  ['wedding-jute-bags-for-return-gifts', '/wedding-jute-bags-for-return-gifts'],
+  ['jute-fabric-wholesale-market', '/jute-fabric-wholesale-market'],
+  ['eco-friendly-jute-shopping-bags-wholesale', '/eco-friendly-jute-shopping-bags-wholesale'],
+  ['small-jute-bags-wholesale', '/small-jute-bags-wholesale'],
   ['services', '/services'],
   ['testimonials', '/testimonials'],
   ['privacy-policy', '/privacy-policy'],
-  ['leading-jute-bag-manufacturers', '/blogs'],
-  ['category/blogs', '/blogs'],
+  ['leading-jute-bag-manufacturers', '/leading-jute-bag-manufacturers'],
+  ['category/blogs', '/leading-jute-bag-manufacturers'],
 ])
 
 const postAliases = new Map([
-  ['small-jute-bags-wholesale', 'why-choose-small-jute-bags-wholesale-business'],
-  ['jute-fabric-wholesale-market', 'exploring-the-jute-fabric-wholesale-market'],
   ['cheap-jute-bags-wholesale', 'cheap-jute-bags-for-return-gifts'],
 ])
 
@@ -40,12 +41,15 @@ export function normalizeInternalLink(href, knownSlugs = []) {
   } catch {
     return null
   }
-  const pageMatch = path.match(/^leading-jute-bag-manufacturers\/(\d+)$/)
-  if (pageMatch) return `/blogs/page/${pageMatch[1]}${url.hash}`
+  if (path === 'blogs' || path.startsWith('blogs/')) {
+    path = path.replace(/^blogs(?=\/|$)/, 'leading-jute-bag-manufacturers')
+  }
+  const pageMatch = path.match(/^leading-jute-bag-manufacturers\/(?:page\/)?(\d+)$/)
+  if (pageMatch) return `/leading-jute-bag-manufacturers/page/${pageMatch[1]}${url.hash}`
   if (fixedRoutes.has(path)) return `${fixedRoutes.get(path)}${url.search}${url.hash}`
 
   const alias = postAliases.get(path) || path
-  if (knownSlugs.includes(alias)) return `/blogs/${alias}${url.search}${url.hash}`
+  if (knownSlugs.includes(alias)) return `/leading-jute-bag-manufacturers/${alias}${url.search}${url.hash}`
 
   // Never leave a clickable link pointing back to the WordPress site when the
   // React app has no matching route for it.

@@ -1,4 +1,4 @@
-.contact-page { min-height: 70vh; padding: 0; color: var(--ink); background: #f5f1e6; }
+.contact-page { min-height: 70vh; padding: 0; color: var(--ink); background: #fff; }
 .contact-page-shell { width: 100%; margin: 0 auto; }
 .contact-banner { position: relative; min-height: 355px; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; padding: 66px 6% 54px; color: #fff; background: #293b2e; isolation: isolate; text-align: center; }
 .contact-banner::before { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(20,27,21,.52), rgba(18,24,19,.68)), url('/images/Header-image.jpg') center 48% / cover no-repeat; animation: contact-banner-image 18s ease-in-out infinite alternate; content: ''; }
@@ -15,32 +15,32 @@
 .contact-banner h1 { animation: contact-banner-copy-in .8s cubic-bezier(.2,.7,.2,1) both; }
 .contact-banner > p { animation: contact-banner-copy-in .8s .12s cubic-bezier(.2,.7,.2,1) both; }
 .contact-scroll-link { animation: contact-banner-copy-in .8s .22s cubic-bezier(.2,.7,.2,1) both; }
-.contact-page-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(420px, 1.05fr); gap: clamp(35px, 7vw, 94px); align-items: start; width: min(100%, 1300px); margin: 0 auto; padding: 68px clamp(30px, 6vw, 76px) 68px; }
+.contact-page-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(420px, 1.05fr); gap: clamp(35px, 7vw, 94px); align-items: start; width: min(100%, 1300px); margin: 0 auto; padding: 68px clamp(30px, 6vw, 76px) 68px; background-image: linear-gradient(to bottom, #fff 0%, #fff 54%, rgba(255,255,255,0) 72%), url('../assets/images/products/jute-fabric/laminated-jute-fabric.webp'); background-position: center, bottom center; background-size: 100% 100%, 100vw 32vh; background-repeat: no-repeat; background-attachment: scroll, fixed; }
 .contact-information { padding-top: 11px; }
 .contact-section-kicker, .contact-form-heading > span { margin: 0 0 10px; color: #8b7855; font-size: 9px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
-.contact-information h2 { max-width: 510px; margin: 0; color: #263b30; font-family: 'DM Sans', sans-serif; font-size: clamp(31px, 3.4vw, 43px); font-weight: 800; letter-spacing: -.045em; line-height: 1.08; }
-.contact-information h3 { max-width: 490px; margin: 22px 0 0; color: #344d39; font-family: 'DM Sans', sans-serif; font-size: clamp(23px, 2.6vw, 34px); font-weight: 800; line-height: 1.18; }
-.contact-information h3 em { color: #71804f; font-style: normal; }
-.contact-info-copy { max-width: 410px; margin: 14px 0 25px; color: #70766c; font-size: 12px; line-height: 1.8; }
-.contact-info-list { display: grid; gap: 9px; }
-.contact-info-card { min-height: 65px; display: flex; align-items: center; gap: 13px; padding: 12px; border: 1px solid #e5dfd0; background: rgba(255,255,255,.63); transition: border-color .2s, transform .2s, box-shadow .2s; }
-.contact-info-card:hover { transform: translateX(4px); border-color: #c6b78f; box-shadow: 0 7px 19px rgba(44,55,39,.06); }
-.contact-info-icon { width: 37px; height: 37px; display: grid; flex: 0 0 37px; place-items: center; color: #66734b; border-radius: 50%; background: #e8eadc; }
+.contact-information h2 { max-width: 320px; margin: 0; color: #111; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: clamp(44px, 3.7vw, 49px); font-weight: 700; letter-spacing: 0; line-height: 1.12; }
+.contact-information h3 { max-width: 350px; margin: 22px 0 0; color: #111; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: clamp(31px, 2.8vw, 37px); font-weight: 700; line-height: 1.16; }
+.contact-information h3 em { color: #111; font-style: normal; }
+.contact-info-copy { max-width: 410px; margin: 14px 0 25px; color: #252525; font-size: 13px; line-height: 1.7; }
+.contact-info-list { display: grid; gap: 12px; }
+.contact-info-card { min-height: 65px; display: flex; align-items: center; gap: 16px; padding: 5px 0; border: 0; background: transparent; transition: opacity .2s; }
+.contact-info-card:hover { opacity: .82; }
+.contact-info-icon { width: 54px; height: 54px; display: grid; flex: 0 0 54px; place-items: center; color: #fff; border-radius: 0; background: #10b431; }
 .contact-info-card > span:nth-child(2) { display: grid; gap: 4px; flex: 1; min-width: 0; }
-.contact-info-card small { color: #8b8d7d; font-size: 8px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.contact-info-card strong { overflow-wrap: anywhere; color: #334338; font-size: 11px; font-weight: 700; }
-.contact-info-card > svg { flex: 0 0 auto; color: #ad8354; }
+.contact-info-card small { color: #111; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+.contact-info-card strong { overflow-wrap: anywhere; color: #637032; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 20px; font-weight: 700; line-height: 1.2; }
+.contact-info-card > svg { display: none; }
 .contact-address-card { align-items: flex-start; }
 .contact-address-card .contact-info-icon { margin-top: 1px; }
-.contact-form-panel { padding: clamp(25px, 4vw, 43px); border: 1px solid rgba(255,255,255,.24); border-radius: 7px; color: #fff; background: #596637; box-shadow: 0 18px 50px rgba(47,55,39,.15); }
+.contact-form-panel { padding: clamp(25px, 4vw, 43px); border: 0; border-radius: 0; color: #fff; background: #626b32; box-shadow: none; }
 .contact-form-heading { padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.22); }
 .contact-form-heading > span { display: block; margin-bottom: 8px; color: #e1d2ad; }
-.contact-form-heading h2 { margin: 0; color: #fff; font-family: 'Fraunces', Georgia, serif; font-size: clamp(25px, 3vw, 34px); font-weight: 500; }
-.contact-form-heading > p { margin: 7px 0 0; color: #e1e4d9; font-size: 10px; line-height: 1.6; }
+.contact-form-heading h2 { margin: 0; color: #fff; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: clamp(29px, 3vw, 36px); font-weight: 700; line-height: 1.1; }
+.contact-form-heading > p { margin: 7px 0 0; color: #e1e4d9; font-size: 11px; line-height: 1.6; }
 .contact-page-form { display: grid; gap: 17px; padding-top: 22px; }
-.contact-page-form label { display: grid; gap: 7px; color: #f5f1e7; font-size: 9px; font-weight: 700; }
+.contact-page-form label { display: grid; gap: 7px; color: #f5f1e7; font-size: 10px; font-weight: 700; }
 .contact-form-name-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.contact-page-form input, .contact-page-form textarea { width: 100%; min-height: 43px; padding: 0 12px; border: 1px solid #ded9cc; border-radius: 3px; outline: 0; color: #293a30; background: #fbfaf5; font: inherit; font-size: 11px; transition: border-color .2s, box-shadow .2s; }
+.contact-page-form input, .contact-page-form textarea { width: 100%; min-height: 43px; padding: 0 12px; border: 1px solid #ded9cc; border-radius: 3px; outline: 0; color: #293a30; background: #fbfaf5; font: inherit; font-size: 12px; transition: border-color .2s, box-shadow .2s; }
 .contact-page-form textarea { min-height: 90px; padding-top: 11px; resize: vertical; }
 .contact-page-form input::placeholder { color: #a5a597; }
 .contact-page-form input:focus { border-color: #71805b; box-shadow: 0 0 0 3px rgba(104,118,71,.12); }
@@ -54,7 +54,7 @@
 .contact-map-section { width: min(100% - 12%, 1300px); margin: 0 auto 75px; overflow: hidden; border: 1px solid #e5dfd0; background: #fffdf8; }
 .contact-map-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 11px 20px; padding: 17px 22px; }
 .contact-map-heading > span { display: inline-flex; align-items: center; gap: 7px; color: #74804e; font-size: 9px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.contact-map-heading h2 { margin: 0; color: #263b30; font-family: 'Fraunces', Georgia, serif; font-size: 22px; font-weight: 500; }
+.contact-map-heading h2 { margin: 0; color: #111; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 26px; font-weight: 700; }
 .contact-map-heading p { margin: 0 0 0 auto; color: #70766c; font-size: 10px; }
 .contact-map-section iframe { display: block; width: 100%; height: 345px; border: 0; filter: saturate(.8); }
 

@@ -1,4 +1,4 @@
-.product-card { width: 100%; padding: 0; color: inherit; border: 0; background: transparent; font: inherit; text-align: left; cursor: pointer; }
+.product-card { width: 100%; padding: 0; color: inherit; border: 0; background: transparent; font: inherit; text-align: left; cursor: default; }
 .products-section { min-height: 610px; padding: 46px 8% 48px; background: #ded4c2; }
 .products-title { margin: 0 0 38px; color: #343b21; font-family: 'DM Sans', sans-serif; font-size: clamp(28px, 3vw, 38px); font-weight: 800; text-align: center; }
 .product-carousel { position: relative; width: min(100%, 1240px); margin: 0 auto; touch-action: pan-y; }
@@ -56,7 +56,7 @@
 @media (max-width: 480px) {
   .journey-section { padding: 38px 5% 46px; }
   .journey-title { margin-bottom: 30px; font-size: 27px; }
-  .journey-grid { gap: 12px; }
+  .journey-grid { grid-template-columns: 1fr; gap: 16px; }
   .journey-card { padding: 7px; border-width: 1.5px; border-radius: 9px; }
   .journey-image-wrap { height: 39vw; min-height: 125px; }
   .journey-card h3 { margin-top: 11px; font-size: 14px; }
@@ -335,7 +335,7 @@
   .sustainability-desktop-break { display: none; }
   .journey-section { padding: 38px 5% 46px; }
   .journey-title { margin-bottom: 30px; font-size: 27px; }
-  .journey-grid { gap: 12px; }
+  .journey-grid { grid-template-columns: 1fr; gap: 16px; }
   .journey-card { padding: 7px; border-width: 1.5px; border-radius: 9px; }
   .journey-image-wrap { height: 39vw; min-height: 125px; }
   .journey-card h3 { margin-top: 11px; font-size: 14px; }

@@ -84,7 +84,7 @@ h1 em, h2 em { color: var(--green); font-weight: 500; }
 .product-card { min-width: 0; grid-column: span 2; }
 .product-card:nth-child(4) { grid-column: 2 / span 2; }
 .product-card:nth-child(5) { grid-column: 4 / span 2; }
-.product-image { height: clamp(190px, 25vw, 320px); overflow: hidden; position: relative; background: var(--cream); }
+.product-image { display: block; height: clamp(190px, 25vw, 320px); overflow: hidden; position: relative; background: var(--cream); }
 .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
 .product-card:hover .product-image img { transform: scale(1.045); }
 .product-number { position: absolute; top: 12px; left: 12px; padding: 7px 9px; color: var(--ink); background: var(--paper); font-size: 9px; }
@@ -128,6 +128,14 @@ h1 em, h2 em { color: var(--green); font-weight: 500; }
 .review-rating p { margin: 0; color: #73786d; font-size: 10px; line-height: 1.6; }
 .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
 .review-card { padding: 24px 26px 21px; background: #eee9dc; }
+.review-grid { display: block; }
+.review-card { display: none; }
+.review-card.is-active { display: block; width: min(100%, 900px); margin: 0 auto; animation: review-card-arrive .45s ease both; }
+.review-carousel { max-width: 1080px; margin: 0 auto; }
+.review-carousel-dots { display: flex; justify-content: center; gap: 10px; margin-top: 24px; }
+.review-carousel-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 99px; background: #c5c3b7; cursor: pointer; transition: width .2s, background-color .2s; }
+.review-carousel-dots button.is-active { width: 22px; background: #626b2c; }
+@keyframes review-card-arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 .quote-mark { height: 35px; color: var(--orange); font-family: 'Fraunces', serif; font-size: 58px; line-height: 1; }
 .review-quote { min-height: 83px; margin: 9px 0 22px; font-family: 'Fraunces', serif; font-size: 19px; line-height: 1.5; }
 .review-author { display: flex; align-items: center; gap: 11px; padding-top: 15px; border-top: 1px solid var(--line); }
@@ -148,7 +156,9 @@ h1 em, h2 em { color: var(--green); font-weight: 500; }
 .button-light { color: var(--ink); background: var(--paper); }
 
 
-.whatsapp-float { position: fixed; right: 18px; bottom: 18px; z-index: 9; display: flex; align-items: center; gap: 10px; padding: 12px 14px; color: white; background: var(--green); box-shadow: 0 5px 22px rgba(28,44,31,.2); font-size: 10px; font-weight: 700; }
+.whatsapp-float { position: fixed; right: 18px; bottom: 18px; z-index: 9; display: flex; align-items: center; gap: 10px; padding: 0; color: #111; background: transparent; box-shadow: none; font-family: 'Albert Sans', sans-serif; font-size: 12px; font-weight: 700; text-decoration: none; }
+.whatsapp-float .whatsapp-float-prompt { padding: 6px 11px; border-radius: 5px; background: #fff; box-shadow: 0 3px 12px rgba(0,0,0,.22); }
+.whatsapp-float .whatsapp-float-logo { width: 48px; height: 48px; display: grid; place-items: center; border: 4px solid rgba(255,255,255,.68); border-radius: 50%; color: #fff; background: #16c75a; box-shadow: 0 5px 20px rgba(11,110,52,.3); font-size: 26px; }
 
 @media (min-width: 1500px) { .hero, .products-section { padding-right: max(5.5%, calc((100% - 1360px) / 2)); padding-left: max(5.5%, calc((100% - 1360px) / 2)); } }
 @media (max-width: 800px) {

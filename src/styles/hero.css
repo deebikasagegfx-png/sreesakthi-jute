@@ -31,7 +31,6 @@
   gap: clamp(35px, 5vw, 70px);
   align-items: center;
   margin: auto;
-
 }
 
 .hero-text h1 {
@@ -106,17 +105,17 @@
 .hero-backgrounds {
   z-index: 0;
   overflow: hidden;
-  background: #26382d url("/images/Header-image.jpg") center / cover no-repeat;
+  background: #26382d url("/images/Untitled-design-34.png") center / cover no-repeat;
 }
 .hero-background {
   background-position: center;
   background-size: cover;
   opacity: 0;
-  animation: hero-background-cycle 12s ease-in-out infinite;
+  animation: hero-background-cycle 15s ease-in-out infinite;
 }
-.hero-background-one { background-image: url("/images/Header-image.jpg"); animation-delay: 0s; }
-.hero-background-two { background-image: url("/images/Header-imgae2.jpg"); animation-delay: 4s; }
-.hero-background-three { background-image: url("/images/Header-imgae3.jpg"); animation-delay: 8s; }
+.hero-background-one { background-image: url("/images/Untitled-design-34.png"); animation-delay: 0s; }
+.hero-background-two { background-image: url("/images/Untitled-design-33.png"); animation-delay: 5s; }
+.hero-background-three { background-image: url("/images/Untitled-design-35.png"); animation-delay: 10s; }
 
 @keyframes hero-background-cycle {
   0% { opacity: 1; transform: scale(1); }
@@ -221,10 +220,7 @@
   transition: transform .65s cubic-bezier(.2,.72,.25,1), box-shadow .25s ease;
 }
 
-.hero-card:nth-child(1) .hero-card-inner { background: #405d49; }
-.hero-card:nth-child(2) .hero-card-inner { background: #65744a; }
-.hero-card:nth-child(3) .hero-card-inner { background: #806b49; }
-.hero-card:nth-child(4) .hero-card-inner { background: #41645c; }
+.hero-card-inner { background: #0da52b; }
 .hero-card:hover .hero-card-inner { box-shadow: 0 17px 34px rgba(20, 43, 26, .3); }
 .hero-card.is-flipped .hero-card-inner { transform: rotateY(180deg); }
 .hero-card:focus-visible { outline: 3px solid #e4cf9f; outline-offset: 5px; }
@@ -243,11 +239,11 @@
   -webkit-backface-visibility: hidden;
 }
 
-.hero-card-front strong { font-family: 'Fraunces', Georgia, serif; font-size: 25px; font-weight: 700; line-height: 1.15; }
+.hero-card-front strong { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 27px; font-weight: 700; line-height: 1.08; }
 .hero-card-back { transform: rotateY(180deg); }
 .hero-card-front { transform: rotateY(0deg); }
-.hero-card-back-label { color: #f0ddb2; font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 700; line-height: 1.25; }
-.hero-card-description { max-width: 245px; margin: 0; font-size: 15px; line-height: 1.6; }
+.hero-card-back-label { color: #fff; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 22px; font-weight: 700; line-height: 1.15; }
+.hero-card-description { max-width: 245px; margin: 0; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; line-height: 1.5; }
 .hero-card-hint { color: rgba(255,255,255,.72); font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .hero-card:focus-visible .hero-card-inner { box-shadow: 0 0 0 2px #e4cf9f, 0 12px 28px rgba(20,43,26,.2); }
 
@@ -255,7 +251,8 @@
   .hero-card-inner { transition: none; }
 }
 
-.home-about-reveal .intro-section { padding-top: 160px; }
+/* Keep the About section clear of the overlapping hero benefit cards. */
+.home-about-reveal { padding-top: 180px; }
 
 /* TABLET */
 
@@ -283,7 +280,7 @@
     transform: none;
   }
 
-  .home-about-reveal .intro-section { padding-top: 53px; }
+  .home-about-reveal { padding-top: 40px; }
 }
 
 
@@ -377,4 +374,40 @@
   .hero-card-face { padding: 14px 10px; }
 
   .hero-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #17251c;
+  }
+
+  .hero-backgrounds {
+    right: 0;
+    bottom: auto;
+    height: clamp(420px, 78vw, 560px);
+    background: #17251c;
+  }
+
+  .hero-background {
+    background-size: cover;
+    animation: none;
+    transform: none;
+  }
+
+  .hero-background-one {
+    opacity: 1;
+    background-position: 62% center;
+  }
+
+  .hero-background-two,
+  .hero-background-three { display: none; }
+
+  .hero-overlay {
+    right: 0;
+    bottom: auto;
+    height: clamp(420px, 78vw, 560px);
+    background: linear-gradient(180deg, rgba(0,0,0,.34) 0%, rgba(0,0,0,.48) 66%, #17251c 100%);
+  }
 }

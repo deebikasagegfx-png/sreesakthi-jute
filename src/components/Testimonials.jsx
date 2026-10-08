@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
+
 const reviews = [
   { quote: 'I ordered custom jute bags for my boutique, and I’m extremely happy with the quality and finish. Sree Sakthi Jute Bags delivered on time and with great professionalism. Highly recommend for eco-friendly packaging!', author: 'Priya Ramesh', location: 'T. Nagar, Chennai' },
   { quote: 'These bags are sturdy, well-stitched, and perfect for daily use. I’ve been using their products for my organic store, and my customers love them. Great service and value!', author: 'Arvind Kumar', location: 'Tambaram, Chennai' },
@@ -6,10 +9,28 @@ const reviews = [
 ]
 
 export default function Testimonials() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const showReview = (index) => setActiveIndex((index + reviews.length) % reviews.length)
+
   return (
     <section className="review-section" id="reviews">
-      <div className="review-heading"><div><p className="eyebrow">Customer Reviews</p><h2>Kind words.<br /><em>Good company.</em></h2></div><div className="review-rating"><span>★★★★★</span><p>Made with care.<br />Loved in real life.</p></div></div>
-      <div className="review-grid">{reviews.map((review) => <article className="review-card" key={review.author}><div className="quote-mark">“</div><p className="review-quote">{review.quote}</p><div className="review-author"><span className="author-mark">{review.author.slice(0, 1)}</span><p><strong>{review.author}</strong><span>{review.location}</span></p><span className="review-stars">★★★★★</span></div></article>)}</div>
+      <h2 className="review-section-title">Reviews</h2>
+      <div className="review-carousel">
+        <button className="review-arrow review-arrow-previous" type="button" onClick={() => showReview(activeIndex - 1)} aria-label="Previous review"><ArrowLeft size={24} aria-hidden="true" /></button>
+        <div className="review-grid" aria-live="polite" aria-atomic="true">
+          {reviews.map((review, index) => (
+            <article className={`review-card${index === activeIndex ? ' is-active' : ''}`} key={review.author} aria-hidden={index !== activeIndex}>
+              <p className="review-quote">{review.quote}</p>
+              <span className="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <div className="review-author"><p><strong>{review.author} – {review.location}</strong></p></div>
+            </article>
+          ))}
+        </div>
+        <button className="review-arrow review-arrow-next" type="button" onClick={() => showReview(activeIndex + 1)} aria-label="Next review"><ArrowRight size={24} aria-hidden="true" /></button>
+        <div className="review-carousel-dots" role="group" aria-label="Choose a review">
+          {reviews.map((review, index) => <button type="button" key={review.author} className={index === activeIndex ? 'is-active' : ''} onClick={() => setActiveIndex(index)} aria-label={`Show review by ${review.author}`} aria-pressed={index === activeIndex} />)}
+        </div>
+      </div>
     </section>
   )
 }

@@ -9,7 +9,7 @@ import '../styles/blog-article.css'
 export default function BlogArticlePage() {
   return (
     <main className="article-page source-article-page">
-      <a className="source-article-back" href="/blogs"><ArrowLeft size={15} /> All stories</a>
+      <a className="source-article-back" href="/leading-jute-bag-manufacturers"><ArrowLeft size={15} /> All stories</a>
       <div className="source-article">
         <h1>Why Choose Small Jute Bags Wholesale for Your Business</h1>
         <p className="source-article-byline">By ssjutebags / January 30, 2026</p>

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import homeProducts from '../data/homeProducts'
 import './HomeProductCarousel.css'
@@ -10,23 +10,14 @@ const getVisibleCount = () => {
   return 3
 }
 
+const wrapIndex = (index, length) => (index + length) % length
+
 export default function HomeProductCarousel() {
   const [visibleCount, setVisibleCount] = useState(getVisibleCount)
-  const [position, setPosition] = useState(1)
-  const [transitionEnabled, setTransitionEnabled] = useState(true)
+  const [activeStart, setActiveStart] = useState(0)
   const [paused, setPaused] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
   const pointerStart = useRef(null)
-  const pageCount = Math.ceil(homeProducts.length / visibleCount)
-
-  const pages = useMemo(() => {
-    return Array.from({ length: pageCount }, (_, pageIndex) =>
-      Array.from({ length: visibleCount }, (_, itemIndex) =>
-        homeProducts[(pageIndex * visibleCount + itemIndex) % homeProducts.length],
-      ),
-    )
-  }, [pageCount, visibleCount])
-  const loopedPages = [pages[pages.length - 1], ...pages, pages[0]]
 
   useEffect(() => {
     const updateVisibleCount = () => setVisibleCount(getVisibleCount())
@@ -44,31 +35,20 @@ export default function HomeProductCarousel() {
   }, [])
 
   useEffect(() => {
-    setTransitionEnabled(false)
-    setPosition(1)
-    const frame = requestAnimationFrame(() => requestAnimationFrame(() => setTransitionEnabled(true)))
-    return () => cancelAnimationFrame(frame)
-  }, [visibleCount])
-
-  useEffect(() => {
-    if (paused || reducedMotion || pageCount < 2) return undefined
+    if (paused || reducedMotion || homeProducts.length < 2) return undefined
     const timer = window.setInterval(() => {
-      setPosition((current) => current + 1)
-    }, 3500)
+      setActiveStart((index) => wrapIndex(index + 1, homeProducts.length))
+    }, 5000)
     return () => window.clearInterval(timer)
-  }, [pageCount, paused, reducedMotion])
+  }, [paused, reducedMotion])
 
-  const goToPage = (pageIndex) => setPosition(pageIndex + 1)
-  const handleTransitionEnd = (event) => {
-    if (event.target !== event.currentTarget) return
-
-    if (position === 0 || position === pageCount + 1) {
-      const realPosition = position === 0 ? pageCount : 1
-      setTransitionEnabled(false)
-      setPosition(realPosition)
-      requestAnimationFrame(() => requestAnimationFrame(() => setTransitionEnabled(true)))
-    }
+  const move = (direction) => {
+    setActiveStart((index) => wrapIndex(index + direction, homeProducts.length))
   }
+  const visibleProducts = Array.from({ length: visibleCount }, (_, offset) => (
+    homeProducts[wrapIndex(activeStart + offset, homeProducts.length)]
+  ))
+
   const handlePointerDown = (event) => {
     pointerStart.current = { x: event.clientX, y: event.clientY }
   }
@@ -78,7 +58,7 @@ export default function HomeProductCarousel() {
     const deltaY = event.clientY - pointerStart.current.y
     pointerStart.current = null
     if (Math.abs(deltaX) < 45 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return
-    setPosition((current) => current + (deltaX < 0 ? 1 : -1))
+    move(deltaX < 0 ? 1 : -1)
   }
 
   return (
@@ -98,76 +78,29 @@ export default function HomeProductCarousel() {
 
       <div className="home-product-carousel__body">
         <div className="home-product-carousel__stage">
-          <button
-            className="home-product-carousel__arrow home-product-carousel__arrow--previous"
-            type="button"
-            aria-label="Previous product"
-            onClick={() => setPosition((current) => current - 1)}
-          >
+          <button className="home-product-carousel__arrow home-product-carousel__arrow--previous" type="button" aria-label="Previous product" onClick={() => move(-1)}>
             <ArrowLeft size={19} strokeWidth={3} aria-hidden="true" />
           </button>
 
-          <div
-            className="home-product-carousel__viewport"
-            onPointerDown={handlePointerDown}
-            onPointerUp={handlePointerUp}
-            onPointerCancel={() => { pointerStart.current = null }}
-          >
-            <div
-              className="home-product-carousel__track"
-              style={{
-                '--home-carousel-visible-count': visibleCount,
-                transform: `translateX(-${position * 100}%)`,
-                transition: transitionEnabled && !reducedMotion ? undefined : 'none',
-              }}
-              onTransitionEnd={handleTransitionEnd}
-            >
-              {loopedPages.map((page, pageIndex) => {
-                return (
-                  <div
-                    className="home-product-carousel__page"
-                    key={`page-${pageIndex}`}
-                    aria-hidden={pageIndex !== position}
-                    style={{ '--home-carousel-visible-count': page.length }}
-                  >
-                    {page.map((product) => (
-                      <article className="home-product-carousel__card" key={product.id}>
-                        <img
-                          className="home-product-carousel__image"
-                          src={product.image}
-                          alt={product.name}
-                          loading="lazy"
-                          draggable="false"
-                        />
-                        <h3 className="home-product-carousel__name">{product.name}</h3>
-                      </article>
-                    ))}
-                  </div>
-                )
-              })}
+          <div className="home-product-carousel__viewport" onPointerDown={handlePointerDown} onPointerUp={handlePointerUp} onPointerCancel={() => { pointerStart.current = null }}>
+            <div className="home-product-carousel__page" style={{ '--home-carousel-visible-count': visibleCount }} aria-live="polite" aria-atomic="true">
+              {visibleProducts.map((product, itemIndex) => (
+                <article className="home-product-carousel__card" key={`${activeStart}-${product.id}`}>
+                  <img className="home-product-carousel__image" style={{ '--product-order': itemIndex }} src={product.image} alt={product.name} loading="lazy" draggable="false" />
+                  <h3 className="home-product-carousel__name">{product.name}</h3>
+                </article>
+              ))}
             </div>
           </div>
 
-          <button
-            className="home-product-carousel__arrow home-product-carousel__arrow--next"
-            type="button"
-            aria-label="Next product"
-            onClick={() => setPosition((current) => current + 1)}
-          >
+          <button className="home-product-carousel__arrow home-product-carousel__arrow--next" type="button" aria-label="Next product" onClick={() => move(1)}>
             <ArrowRight size={19} strokeWidth={3} aria-hidden="true" />
           </button>
         </div>
 
         <div className="home-product-carousel__dots" role="group" aria-label="Product groups">
-          {pages.map((page, index) => (
-            <button
-              className={`home-product-carousel__dot${position - 1 === index ? ' is-active' : ''}`}
-              key={page[0].id}
-              type="button"
-              aria-label={`Go to product group ${index + 1}: ${page.map((product) => product.name).join(', ')}`}
-              aria-current={position - 1 === index ? 'true' : undefined}
-              onClick={() => goToPage(index)}
-            />
+          {homeProducts.map((product, index) => (
+            <button className={`home-product-carousel__dot${activeStart === index ? ' is-active' : ''}`} key={product.id} type="button" aria-label={`Show ${product.name}`} aria-current={activeStart === index ? 'true' : undefined} onClick={() => setActiveStart(index)} />
           ))}
         </div>
       </div>

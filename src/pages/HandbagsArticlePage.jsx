@@ -62,7 +62,7 @@ export default function HandbagsArticlePage() {
       <header className="article-hero">
         <img src={handbagHeroImage} alt="Jute handbags for wholesale and retail businesses" />
         <div className="article-hero-shade" />
-        <a className="article-back" href="/blogs"><ArrowLeft size={15} /> All stories</a>
+        <a className="article-back" href="/leading-jute-bag-manufacturers"><ArrowLeft size={15} /> All stories</a>
         <div className="article-hero-copy">
           <p className="article-kicker"><Leaf size={15} /> WHOLESALE · SOURCING GUIDE</p>
           <h1>Source Quality<br />Jute Handbags<br /><em>Wholesale</em></h1>

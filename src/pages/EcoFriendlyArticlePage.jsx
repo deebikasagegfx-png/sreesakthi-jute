@@ -34,7 +34,7 @@ export default function EcoFriendlyArticlePage() {
       <header className="article-hero">
         <img src={ecoFriendlyHeroImage} alt="Eco-friendly jute bags" />
         <div className="article-hero-shade" />
-        <a className="article-back" href="/blogs"><ArrowLeft size={15} /> All stories</a>
+        <a className="article-back" href="/leading-jute-bag-manufacturers"><ArrowLeft size={15} /> All stories</a>
         <div className="article-hero-copy">
           <p className="article-kicker"><Leaf size={15} /> SUSTAINABILITY · BUYING GUIDE</p>
           <h1>A Complete Guide<br />to Choosing <em>Eco-Friendly Jute Bags</em></h1>
@@ -129,8 +129,8 @@ export default function EcoFriendlyArticlePage() {
       </section>
 
       <nav className="eco-friendly-post-nav" aria-label="Article navigation">
-        <a href="/blogs/exploring-the-top-jute-bag-manufacturers"><ArrowLeft size={15} /><span><small>PREVIOUS</small>How Jute Bag Manufacturers Support Green Business &amp; Sustainable Living</span></a>
-        <a href="/blogs/how-to-source-quality-jute-handbags-wholesale"><span><small>NEXT</small>How to Source High-Quality Jute Handbags Wholesale for Your Business</span><ArrowRight size={15} /></a>
+        <a href="/leading-jute-bag-manufacturers/exploring-the-top-jute-bag-manufacturers"><ArrowLeft size={15} /><span><small>PREVIOUS</small>How Jute Bag Manufacturers Support Green Business &amp; Sustainable Living</span></a>
+        <a href="/leading-jute-bag-manufacturers/how-to-source-quality-jute-handbags-wholesale"><span><small>NEXT</small>How to Source High-Quality Jute Handbags Wholesale for Your Business</span><ArrowRight size={15} /></a>
       </nav>
       <RelatedPostsAndComments />
     </main>

@@ -1,4 +1,4 @@
-﻿import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import RelatedPostsAndComments from '../components/RelatedPostsAndComments'
 import folderHeroImage from '../assets/images/removesen2.jpg'
 import '../styles/blog-article.css'
@@ -53,7 +53,7 @@ const faqs = [
 export default function FolderArticlePage() {
   return (
     <main className="article-page source-article-page">
-      <a className="source-article-back" href="/blogs"><ArrowLeft size={15} /> All stories</a>
+      <a className="source-article-back" href="/leading-jute-bag-manufacturers"><ArrowLeft size={15} /> All stories</a>
       <div className="source-article">
         <h1>Why Jute File Folders Are the Smart Choice for Eco Offices</h1>
         <img className="source-article-image" src={folderHeroImage} alt="Jute file folders for office and conference use" />

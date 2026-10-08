@@ -21,7 +21,7 @@ export default function ManufacturersArticlePage() {
       <header className="article-hero">
         <img src={articleImage} alt="Exploring the Top Jute Bag Manufacturers for Eco-Friendly Choices" />
         <div className="article-hero-shade" />
-        <a className="article-back" href="/blogs"><ArrowLeft size={15} /> All stories</a>
+        <a className="article-back" href="/leading-jute-bag-manufacturers"><ArrowLeft size={15} /> All stories</a>
         <div className="article-hero-copy">
           <p className="article-kicker">SUSTAINABLE CHOICES · MANUFACTURER GUIDE</p>
           <h1>Exploring the Top<br /><em>Jute Bag Manufacturers</em><br />for Eco-Friendly Choices</h1>
@@ -72,7 +72,7 @@ export default function ManufacturersArticlePage() {
         <h2>Final Thoughts</h2>
         <p>At <strong><Link to="/">Sreesakthi</Link></strong> jute bag, additional use of jute bags is not just a fashion statement—it’s a promise to an earth-friendly world. Authentic Jute Bag Manufacturers enable you to enjoy the advantage of products being functional, fashionable, and environmental.</p>
         <p>Whether you’re a business owner looking to promote your brand sustainably, or an individual making greener lifestyle choices, jute bags are the perfect eco-friendly solution. By supporting trusted manufacturers, you’re not only investing in high-quality products but also contributing to a better future for the planet.</p>
-        <Link className="manufacturer-next-link" to="/blogs/why-jute-bag-manufacturers-in-chennai">Next: Why Jute Bag Manufacturers in Chennai Are Gaining Popularity <ArrowDown size={15} /></Link>
+        <Link className="manufacturer-next-link" to="/leading-jute-bag-manufacturers/why-jute-bag-manufacturers-in-chennai">Next: Why Jute Bag Manufacturers in Chennai Are Gaining Popularity <ArrowDown size={15} /></Link>
       </article>
 
       <RelatedPostsAndComments posts={relatedPosts} />

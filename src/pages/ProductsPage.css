@@ -33,3 +33,50 @@
 @media (max-width: 800px) {
   .products-index-page__hero { min-height: 420px; }
 }
+
+/* Product catalogue layout follows the reference page; descriptions stay in the category banner. */
+.products-index-page .products-section { min-height: 0; padding: 28px 0 58px; background: #fff; }
+.products-index-page .products-heading-row { justify-content: center; margin-bottom: 0; padding: 0; border: 0; text-align: center; }
+.products-index-page .products-heading-row .eyebrow,
+.products-index-page .products-intro { display: none; }
+.products-index-page .products-title { margin: 0; color: #111; font-family: inherit; font-size: clamp(30px, 3.2vw, 40px); font-weight: 700; letter-spacing: 0; text-align: center; }
+.products-index-page .product-category-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; width: min(100% - 32px, 1200px); margin: 54px auto 15px; padding: 0; overflow: visible; }
+.products-index-page .product-category-tabs button,
+.products-index-page .product-category-tabs button:nth-child(odd) { min-height: 40px; flex: 0 0 auto; padding: 0 25px; border: 0; border-radius: 0; color: #fff; background: #626b2d; font-family: inherit; font-size: 12px; font-weight: 700; text-align: center; }
+.products-index-page .product-category-tabs button.is-active,
+.products-index-page .product-category-tabs button.is-active:nth-child(odd) { color: #fff; background: #13ae32; box-shadow: none; }
+.products-index-page .product-category-tabs button::before { display: none; }
+.products-index-page .product-category-tabs button:hover { background: #13ae32; transform: translateY(-1px); }
+.products-index-page .product-fabric-quote { min-height: 156px; width: calc(100% - 32px); margin: 15px auto 28px; padding: 24px clamp(24px, 16vw, 250px); border: 0; border-radius: 0; box-shadow: none; font-size: clamp(14px, 1.2vw, 16px); line-height: 1.55; }
+.products-index-page .product-fabric-quote::before { display: none; }
+.products-index-page .product-fabric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3.8vw, 52px); width: min(100% - 40px, 1045px); margin: 0 auto; }
+.products-index-page .product-fabric-card { border: 0; border-radius: 0; box-shadow: none; }
+.products-index-page .product-fabric-card img { aspect-ratio: 1.45; }
+.products-index-page .product-fabric-card > span { min-height: 42px; padding: 11px 4px; font-family: inherit; font-size: 14px; }
+.products-index-page .product-carousel-track .product-meta p { display: none; }
+.products-index-page .product-carousel-track { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; width: min(calc(100% - 40px), 1160px); margin: 0 auto; }
+.products-index-page .product-carousel-track .product-card { width: 100%; }
+.products-index-page .product-carousel-track .product-image { height: clamp(170px, 17vw, 230px); }
+.products-index-page .product-carousel-track .product-meta { min-height: 54px; padding: 12px 8px; }
+.products-index-page .product-carousel-track .product-meta h3 { font-size: clamp(13px, 1.15vw, 16px); }
+
+@media (max-width: 800px) {
+  .products-index-page .products-section { padding-top: 24px; }
+  .products-index-page .product-category-tabs { margin-top: 38px; }
+  .products-index-page .product-fabric-grid { width: calc(100% - 40px); gap: 18px; }
+  .products-index-page .product-carousel-track { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .products-index-page .product-carousel-track .product-image { height: clamp(155px, 24vw, 200px); }
+}
+
+@media (max-width: 580px) {
+  .products-index-page .products-section { padding: 20px 0 42px; }
+  .products-index-page .products-title { font-size: 30px; }
+  .products-index-page .product-category-tabs { justify-content: center; gap: 7px; width: calc(100% - 24px); margin: 30px auto 14px; }
+  .products-index-page .product-category-tabs button,
+  .products-index-page .product-category-tabs button:nth-child(odd) { min-height: 38px; padding: 0 12px; font-size: 11px; }
+  .products-index-page .product-fabric-quote { min-height: 165px; width: calc(100% - 24px); margin: 14px auto 22px; padding: 20px 16px; }
+  .products-index-page .product-fabric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); width: calc(100% - 24px); gap: 12px; }
+  .products-index-page .product-carousel-track { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: calc(100% - 24px); }
+  .products-index-page .product-carousel-track .product-image { height: clamp(135px, 42vw, 190px); }
+  .products-index-page .product-carousel-track .product-meta { min-height: 48px; padding: 10px 5px; }
+}

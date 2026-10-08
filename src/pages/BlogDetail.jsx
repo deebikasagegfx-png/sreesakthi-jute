@@ -64,12 +64,12 @@ export default function BlogDetail() {
     return doc.body.innerHTML
   }, [blog])
 
-  if (!blog) return <main className="source-article-page"><h1>Article not found</h1><Link to="/blogs">Back to blogs</Link></main>
+  if (!blog) return <main className="source-article-page"><h1>Article not found</h1><Link to="/leading-jute-bag-manufacturers">Back to blogs</Link></main>
 
   return (
     <main className="source-article-page blog-detail-page">
-      <Link className="blog-detail-back" to={`/blogs${blog.page > 1 ? `/page/${blog.page}` : ''}`}><ArrowLeft size={16} /> Back to all blogs</Link>
-      <nav className="blog-detail-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/blogs">Blogs</Link><span>/</span><span aria-current="page">{blog.title}</span></nav>
+      <Link className="blog-detail-back" to={`/leading-jute-bag-manufacturers${blog.page > 1 ? `/page/${blog.page}` : ''}`}><ArrowLeft size={16} /> Back to all blogs</Link>
+      <nav className="blog-detail-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/leading-jute-bag-manufacturers">Blogs</Link><span>/</span><span aria-current="page">{blog.title}</span></nav>
       <article className="source-article">
         <h1>{blog.title}</h1>
         <p className="source-article-byline">{formatBlogDate(blog.date)}</p>
@@ -107,8 +107,8 @@ export default function BlogDetail() {
         }} dangerouslySetInnerHTML={{ __html: articleContent }} />
       </article>
       <nav className="blog-post-navigation" aria-label="Article navigation">
-        {blog.previousSlug ? <Link rel="prev" to={`/blogs/${blog.previousSlug}`}><span>Previous Post</span><strong>{blogs.find((post) => post.slug === blog.previousSlug)?.title}</strong></Link> : <span />}
-        {blog.nextSlug ? <Link rel="next" to={`/blogs/${blog.nextSlug}`}><span>Next Post</span><strong>{blogs.find((post) => post.slug === blog.nextSlug)?.title}</strong></Link> : <span />}
+        {blog.previousSlug ? <Link rel="prev" to={`/leading-jute-bag-manufacturers/${blog.previousSlug}`}><span>Previous Post</span><strong>{blogs.find((post) => post.slug === blog.previousSlug)?.title}</strong></Link> : <span />}
+        {blog.nextSlug ? <Link rel="next" to={`/leading-jute-bag-manufacturers/${blog.nextSlug}`}><span>Next Post</span><strong>{blogs.find((post) => post.slug === blog.nextSlug)?.title}</strong></Link> : <span />}
       </nav>
       <section className="article-related">
         <RelatedPosts slugs={blog.relatedPosts} />

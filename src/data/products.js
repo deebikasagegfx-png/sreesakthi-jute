@@ -11,6 +11,18 @@ const categoryDescriptions = {
   'multi-color-fancy-bags': 'Add a splash of color to your style with our multi-color fancy jute bags. Perfect for gifting, parties, and everyday fashion, these bags are crafted from high-quality jute and feature vibrant designs that stand out while supporting sustainable living.',
 }
 
+// Keep the source site's established product URLs local to this React app.
+const categoryRoutes = {
+  'jute-fabric': '/jute-fabric-wholesale-market',
+  'jute-wedding-bags': '/wedding-jute-bags-for-return-gifts',
+  'jute-shopping-bags': '/eco-friendly-jute-shopping-bags-wholesale',
+  'hand-bags': '/products/hand-bags',
+  'jute-promotional-bags': '/products/jute-promotional-bags',
+  'jute-file-folders': '/products/jute-file-folders',
+  'jute-executive-bags': '/products/jute-executive-bags',
+  'multi-color-fancy-bags': '/products/multi-color-fancy-bags',
+}
+
 const localImageUrls = import.meta.glob('../assets/images/products/**/*.{jpg,jpeg,png,webp}', {
   eager: true,
   import: 'default',
@@ -31,6 +43,7 @@ export const products = productManifest.map((category) => {
   return {
     id: category.slug,
     slug: category.slug,
+    route: categoryRoutes[category.slug] ?? `/products/${category.slug}`,
     name: category.name,
     description: categoryDescriptions[category.slug],
     image: gallery[0]?.image,

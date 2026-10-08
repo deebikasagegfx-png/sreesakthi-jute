@@ -14,10 +14,10 @@ export default function RelatedPosts({ slugs = [] }) {
       <div className="article-related-grid">
         {posts.map((post) => (
           <article className="article-related-card" key={post.id}>
-            <Link className="article-related-image" to={`/blogs/${post.slug}`}>
+            <Link className="article-related-image" to={`/leading-jute-bag-manufacturers/${post.slug}`}>
               <img src={post.image} alt={post.imageAlt || post.title} loading="lazy" />
             </Link>
-            <div className="article-related-copy"><h3><Link to={`/blogs/${post.slug}`}>{post.title}</Link></h3></div>
+            <div className="article-related-copy"><h3><Link to={`/leading-jute-bag-manufacturers/${post.slug}`}>{post.title}</Link></h3></div>
           </article>
         ))}
       </div>

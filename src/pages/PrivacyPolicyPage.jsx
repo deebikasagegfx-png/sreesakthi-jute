@@ -1,15 +1,25 @@
+import { Search } from 'lucide-react'
+
 export default function PrivacyPolicyPage() {
+  function handleSearch(event) {
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const searchTerm = String(formData.get('search') || '').trim()
+    if (!searchTerm) return
+
+    const query = `site:sreesakthijutebags.in/privacy-policy/ ${searchTerm}`
+    window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`
+  }
+
   return (
-    <main className="inner-page privacy-page">
-      <div className="page-heading"><p className="eyebrow">The small print</p><h1>Privacy, <em>plainly.</em></h1><p>How this website handles information you choose to share.</p></div>
-      <article className="policy-copy">
-        <h2>Information you share</h2>
-        <p>When you submit a contact, enquiry, or comment form, the details you provide are sent to our team by email so we can respond. This website does not publish comments automatically. Your browser may store the name, email address, and website you choose to save in the article comment form.</p>
-        <h2>Cookies and analytics</h2>
-        <p>This site does not currently use advertising cookies or analytics tracking. Your browser may store basic preferences needed to display the site.</p>
-        <h2>Questions</h2>
-        <p>For questions about this notice, contact Sree Sakthi Jute Bags at +91 63810 67678 or visit No. 56/18, Ujjini Street, Ayanavaram, Chennai – 600 023.</p>
-      </article>
+    <main className="privacy-page not-found-style">
+      <h1>This Page Doesn’t Seem To<br className="desktop-break" /> Exist.</h1>
+      <p>It Looks Like The Link Pointing Here Was Faulty. Maybe Try Searching?</p>
+      <form className="not-found-search" role="search" onSubmit={handleSearch}>
+        <label className="sr-only" htmlFor="not-found-search-input">Search Google for pages on this website</label>
+        <input id="not-found-search-input" name="search" type="search" placeholder="Search Google..." />
+        <button type="submit" aria-label="Search Google"><Search size={17} /></button>
+      </form>
     </main>
   )
 }
