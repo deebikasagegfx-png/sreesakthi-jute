@@ -6,7 +6,7 @@ import rateLimit from 'express-rate-limit'
 
 const app = express()
 const port = Number(process.env.PORT || 3001)
-const recipient = process.env.FORM_SUBMIT_EMAIL || 'deebika02032005@gmail.com'
+const recipient = process.env.FORM_SUBMIT_EMAIL || 'ssjbjute@gmail.com'
 const allowedOrigins = (process.env.CLIENT_ORIGINS || 'http://localhost:5173')
   .split(',')
   .map((origin) => origin.trim())
