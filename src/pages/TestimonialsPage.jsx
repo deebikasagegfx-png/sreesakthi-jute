@@ -1,4 +1,4 @@
-import nationalJuteBoardImage from '../assets/images/national-jute-board.png'
+import nationalJuteBoardImage from '../assets/images/national-jute-board.webp'
 import Testimonials from '../components/Testimonials'
 import '../styles/testimonials-page.css'
 

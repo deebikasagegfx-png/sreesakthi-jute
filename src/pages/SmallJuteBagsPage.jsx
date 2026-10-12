@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Services from '../components/Services'
-import smallJuteBagsImage from '../assets/images/small-jute-bags-source.jpg'
+import smallJuteBagsImage from '../assets/images/small-jute-bags-source.webp'
 
 export default function SmallJuteBagsPage() {
   return (

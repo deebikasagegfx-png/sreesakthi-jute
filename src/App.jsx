@@ -61,7 +61,7 @@ function NotFound() {
 }
 
 function LoadingScreen() {
-  return <div className="brand-splash" role="status" aria-label="Loading Sree Sakthi Jute Bags"><img src="/images/logobgremove.png" alt="Sree Sakthi Jute Bags" /></div>
+  return <div className="brand-splash" role="status" aria-label="Loading Sree Sakthi Jute Bags"><img src="/assets/images/logobg.webp" alt="Sree Sakthi Jute Bags" /></div>
 }
 
 function LegacyBlogRedirect() {
@@ -73,6 +73,7 @@ function LegacyBlogRedirect() {
 function EnquiryPopup({ onClose }) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [status, setStatus] = useState('')
+  const submissionInProgress = useRef(false)
 
   useEffect(() => {
     const onKeyDown = (event) => { if (event.key === 'Escape') onClose() }
@@ -88,22 +89,25 @@ function EnquiryPopup({ onClose }) {
   return <div className="enquiry-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose() }}>
     <section className="enquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
       <button className="enquiry-close" type="button" aria-label="Close enquiry form" onClick={onClose}><X size={20} /></button>
-      <img className="enquiry-image" src="/images/images022.jpg" alt="Reusable jute bags in a range of styles" />
+      <img className="enquiry-image" src="/assets/images/images022.webp" alt="Reusable jute bags in a range of styles" />
       <div className="enquiry-form-wrap">
         <h2 id="enquiry-title">Go Green With Jute Bags</h2>
         <form onSubmit={async (event) => {
           event.preventDefault()
+          if (submissionInProgress.current) return
           const formElement = event.currentTarget
+          submissionInProgress.current = true
           setIsSubmitting(true)
           setStatus('')
           try {
             const fields = Object.fromEntries(new FormData(formElement).entries())
-            await submitWebsiteForm({ formName: 'Home Enquiry Form', pageName: 'Home', fields })
+            await submitWebsiteForm({ formName: 'Home Popup Enquiry Form', pageName: 'Home', fields })
             formElement.reset()
             setStatus(formSuccessMessage)
           } catch (error) {
             setStatus(error instanceof Error ? error.message : formErrorMessage)
           } finally {
+            submissionInProgress.current = false
             setIsSubmitting(false)
           }
         }}>

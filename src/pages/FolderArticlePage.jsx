@@ -1,6 +1,6 @@
 import { ArrowLeft } from 'lucide-react'
 import RelatedPostsAndComments from '../components/RelatedPostsAndComments'
-import folderHeroImage from '../assets/images/removesen2.jpg'
+import folderHeroImage from '../assets/images/removesen2.webp'
 import '../styles/blog-article.css'
 
 const articleSections = [

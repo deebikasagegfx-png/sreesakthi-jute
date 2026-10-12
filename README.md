@@ -20,16 +20,15 @@ The site includes home, about, products, contact, and privacy pages. Product ima
 
 ## Website forms
 
-The popup enquiry, home quote, contact/product enquiry, and article comment forms submit through the Express `POST /api/forms` endpoint. The server forwards each complete submission to `ssjbjute@gmail.com` through FormSubmit.co; it does not connect to Gmail or require a Gmail password, API key, or service account. Submissions include the form name, page URL, and server submission time. All forms use browser required-field/email validation, and disable their submit button while sending.
+All website enquiry, quote, contact, product, and article comment forms submit through Express `POST /api/forms`, which forwards them to `FORM_SUBMIT_EMAIL` through FormSubmit.co.
 
 ### Configure email forwarding
 
-1. No FormSubmit account is required. The first form submission sends an activation email to `ssjbjute@gmail.com`; open it and click its confirmation link. Check spam if it does not appear. Forwarding starts after confirmation.
-2. Keep `FORM_SUBMIT_EMAIL=ssjbjute@gmail.com` in the project-root `.env` file. This is a routing address, not a credential. The server reads it with `dotenv`; Vite does not expose it to React because it has no `VITE_` prefix. `.env` is ignored by Git.
-3. Run `npm run dev` from the project root to start the Express API on port 3001 and Vite on port 5173. Restart the server after changing `.env`.
-4. Submit a form and check the recipient inbox. FormSubmit's AJAX forwarding endpoint is documented at [formsubmit.co/ajax-documentation](https://formsubmit.co/ajax-documentation); the service's first-use email confirmation is described on [its setup page](https://formsubmit.co/).
+1. Set `FORM_SUBMIT_EMAIL=ssjbjute@gmail.com` and `CLIENT_ORIGINS` in the project-root `.env` file. `.env.example` lists the required variables.
+2. The first submission may trigger a FormSubmit activation email. Open it and confirm the destination inbox before expecting form messages to be forwarded.
+3. Run `npm run dev` to start both the Express API and Vite. After deploying, set `FORM_SUBMIT_EMAIL` and `CLIENT_ORIGINS` on the Node server and route `/api/*` to it.
 
-For deployment, set `FORM_SUBMIT_EMAIL` and `CLIENT_ORIGINS` as environment variables on the Node server, and route `/api/*` to it. The React app does not need any email service credentials.
+FormSubmit sends submissions to the configured inbox and does not require Gmail credentials. Check that inbox's spam folder during setup.
 # sreesakthi-jute
 
 

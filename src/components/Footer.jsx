@@ -10,7 +10,7 @@ const footerLinks = [
   { label: 'Contact', href: '/contact' },
 ]
 
-const reasons = ['100% biodegradable', 'Absorbs CO₂, releases O₂', 'Reusable & recyclable', 'Cost-effective', 'Eco-friendly choice']
+const reasons = ['100% biodegradable', 'Absorbs COâ‚‚, releases Oâ‚‚', 'Reusable & recyclable', 'Cost-effective', 'Eco-friendly choice']
 
 export default function Footer() {
   return (
@@ -34,11 +34,11 @@ export default function Footer() {
           <a href="tel:+919884094933"><Phone size={15} /><span>+91 98840 94933</span></a>
           <a href="tel:+916381067678"><Phone size={15} /><span>+91 63810 67678</span></a>
           <a href="mailto:ssjbjute@gmail.com"><Mail size={15} /><span>ssjbjute@gmail.com</span></a>
-          <p><MapPin size={15} /><span>No. 56/18, Ujjini Street,<br />Ayanavaram, Chennai – 600 023</span></p>
+          <p><MapPin size={15} /><span>No. 56/18, Ujjini Street,<br />Ayanavaram, Chennai â€“ 600 023</span></p>
         </div>
       </div>
 
-      <div className="footer-bottom"><span>© {new Date().getFullYear()} Sree Sakthi Jute Bags. All rights reserved. <span className="footer-credit">Powered by Sage GFX Digital Solutions</span></span><Link to="/privacy-policy">Privacy policy</Link><button className="footer-up" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Back to top"><ArrowUpRight size={16} /></button></div>
+      <div className="footer-bottom"><span>Â© {new Date().getFullYear()} Sree Sakthi Jute Bags. All rights reserved. <span className="footer-credit">Powered by Sage GFX Digital Solutions</span></span><Link to="/privacy-policy">Privacy policy</Link><button className="footer-up" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Back to top"><ArrowUpRight size={16} /></button></div>
     </footer>
   )
 }

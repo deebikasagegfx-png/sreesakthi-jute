@@ -59,7 +59,7 @@ export default function SEOManager() {
             ? `${pageHeading} from Sree Sakthi Jute Bags, trusted jute bag manufacturers in Chennai since 2000.`
             : defaultDescription)
       const canonical = `${origin}${normalizedPath === '/' ? '/' : normalizedPath}`
-      const image = `${origin}/images/images022.jpg`
+      const image = `${origin}/assets/images/images022.webp`
 
       document.title = routeTitle
       ensureMeta('meta[name="description"]', { name: 'description', content: description })

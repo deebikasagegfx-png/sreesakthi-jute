@@ -1,7 +1,7 @@
 .contact-page { min-height: 70vh; padding: 0; color: var(--ink); background: #fff; }
 .contact-page-shell { width: 100%; margin: 0 auto; }
 .contact-banner { position: relative; min-height: 355px; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; padding: 66px 6% 54px; color: #fff; background: #293b2e; isolation: isolate; text-align: center; }
-.contact-banner::before { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(20,27,21,.52), rgba(18,24,19,.68)), url('/images/Header-image.jpg') center 48% / cover no-repeat; animation: contact-banner-image 18s ease-in-out infinite alternate; content: ''; }
+.contact-banner::before { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(20,27,21,.52), rgba(18,24,19,.68)), url('/assets/images/Header-image.webp') center 48% / cover no-repeat; animation: contact-banner-image 18s ease-in-out infinite alternate; content: ''; }
 .contact-banner::after { position: absolute; z-index: -1; right: 12%; bottom: -155px; width: 340px; height: 340px; border: 1px solid rgba(233,217,181,.28); border-radius: 50%; box-shadow: 0 0 0 34px rgba(233,217,181,.07), 0 0 0 68px rgba(233,217,181,.05); content: ''; }
 .contact-breadcrumb { position: absolute; top: 22px; left: 6%; display: flex; align-items: center; gap: 9px; color: #eee8d8; font-size: 10px; }
 .contact-breadcrumb a { color: #e0c18e; }

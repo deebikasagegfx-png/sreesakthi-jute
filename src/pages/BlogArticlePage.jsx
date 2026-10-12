@@ -1,9 +1,9 @@
 import { ArrowLeft } from 'lucide-react'
 import RelatedPostsAndComments from '../components/RelatedPostsAndComments'
-import smallBagArticleImage from '../assets/images/small-jute-bags-wholesale.jpeg'
-import smallJutePrintImage from '../assets/images/small-jute-bag-print.jpg'
-import smallJuteGiftingImage from '../assets/images/small-jute-gifting-bags.png'
-import smallJuteGiftImage from '../assets/images/small-jute-gift-bags.jpg'
+import smallBagArticleImage from '../assets/images/small-jute-bags-wholesale.webp'
+import smallJutePrintImage from '../assets/images/small-jute-bag-print.webp'
+import smallJuteGiftingImage from '../assets/images/small-jute-gifting-bags.webp'
+import smallJuteGiftImage from '../assets/images/small-jute-gift-bags.webp'
 import '../styles/blog-article.css'
 
 export default function BlogArticlePage() {

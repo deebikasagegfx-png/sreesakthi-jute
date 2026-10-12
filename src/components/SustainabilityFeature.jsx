@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import sustainabilityImage from '../assets/images/about/why-jute.png'
+import sustainabilityImage from '../assets/images/about/why-jute.webp'
 
 const benefits = [
   '100% BIODEGRADABLE & DECOMPOSABLE',

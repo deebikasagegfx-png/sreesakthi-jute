@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import RelatedPostsAndComments from '../components/RelatedPostsAndComments'
-import materialFabricImage from '../assets/images/removesen1.jpg'
+import materialFabricImage from '../assets/images/removesen1.webp'
 import materialSwatchImage from '../assets/images/back-jute-fib.webp'
 import '../styles/blog-article.css'
 
@@ -65,7 +65,7 @@ export default function MaterialArticlePage() {
         <h1>Who Are the Best Jute Bag Material Suppliers in India?</h1>
         <p className="source-article-byline">MATERIALS · SOURCING GUIDE</p>
         <p>What to look for when choosing a reliable jute material supplier in Chennai and across India.</p>
-        <img className="source-article-image" src="/images/catalog-2387.jpeg" alt="Jute bag material and fabric" />
+        <img className="source-article-image" src="/assets/images/catalog-2387.webp" alt="Jute bag material and fabric" />
         <nav className="source-article-toc" aria-label="Table of contents">
           <h2>Table of Contents</h2>
           <ol>

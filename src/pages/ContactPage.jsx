@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { ArrowDown, ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react'
 import { formErrorMessage, formSuccessMessage, submitWebsiteForm } from '../utils/formSubmission'
@@ -10,10 +10,13 @@ export default function ContactPage() {
   const product = searchParams.get('product') || ''
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [status, setStatus] = useState('')
+  const submissionInProgress = useRef(false)
 
   async function handleSubmit(event) {
     event.preventDefault()
+    if (submissionInProgress.current) return
     const formElement = event.currentTarget
+    submissionInProgress.current = true
     setIsSubmitting(true)
     setStatus('')
     try {
@@ -23,10 +26,13 @@ export default function ContactPage() {
         pageName: 'Contact Us',
         fields,
       })
+
+      formElement.reset()
       setStatus(formSuccessMessage)
     } catch (error) {
       setStatus(error instanceof Error ? error.message : formErrorMessage)
     } finally {
+      submissionInProgress.current = false
       setIsSubmitting(false)
     }
   }
@@ -46,7 +52,7 @@ export default function ContactPage() {
             <p className="contact-section-kicker">Get in touch</p>
             <h2>Jute Bags Manufacturers Chennai Tamil Nadu</h2>
             <h3>Reach Out for <em>Sustainable Solutions</em></h3>
-            <p className="contact-info-copy">Switch to sustainable jute bags — stylish, durable, and earth-friendly. Contact us now!</p>
+            <p className="contact-info-copy">Switch to sustainable jute bags â€” stylish, durable, and earth-friendly. Contact us now!</p>
             <div className="contact-info-list">
               <a className="contact-info-card" href="tel:+916381067678"><span className="contact-info-icon"><Phone size={22} /></span><span><small>Our Phone</small><strong>+91 98840 94933 / +91 63810 67678</strong></span></a>
               <a className="contact-info-card" href="mailto:ssjbjute@gmail.com"><span className="contact-info-icon"><Mail size={22} /></span><span><small>Our Email</small><strong>ssjbjute@gmail.com</strong></span></a>
@@ -58,6 +64,7 @@ export default function ContactPage() {
             
             <form className="contact-page-form" onSubmit={handleSubmit}>
               {product && <input type="hidden" name="product" value={product} />}
+              <input type="hidden" name="subject" value={product ? `Product enquiry: ${product}` : 'Website contact enquiry'} />
               <div className="contact-form-name-row">
                 <label>First name<input name="firstName" type="text" placeholder="Your first name" required /></label>
                 <label>Last name<input name="lastName" type="text" placeholder="Your last name" required /></label>
@@ -66,7 +73,7 @@ export default function ContactPage() {
               <label>Email address<input name="email" type="email" placeholder="Email" required /></label>
               <label>Address<input name="address" type="text" placeholder="Address" required /></label>
               <label>Message<textarea name="message" rows="3" placeholder="Message" required /></label>
-              <button type="submit" disabled={isSubmitting}>{isSubmitting ? 'Sending…' : 'Send enquiry'} <ArrowUpRight size={17} /></button>
+              <button type="submit" disabled={isSubmitting}>{isSubmitting ? 'Sendingâ€¦' : 'Send enquiry'} <ArrowUpRight size={17} /></button>
               <p className="contact-form-note" role="status" aria-live="polite"><span /> {status || 'Your details will be sent to our team.'}</p>
             </form>
           </section>

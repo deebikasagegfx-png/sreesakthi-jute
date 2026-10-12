@@ -1,6 +1,6 @@
 .testimonials-page { --testimonial-ink: #23392f; --testimonial-green: #526b4f; --testimonial-gold: #b67a45; overflow: hidden; color: var(--testimonial-ink); background: #fbfaf6; }
 .testimonials-page-hero { min-height: 360px; position: relative; display: grid; grid-template-columns: 1fr; place-items: center; overflow: hidden; isolation: isolate; padding: 46px 9% 54px; background-color: #f0e9dc; }
-.testimonials-page-hero::before { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(23,39,30,.52), rgba(23,39,30,.4)), url('../assets/images/testimonialsimg.jpg') center 62% / cover no-repeat; animation: testimonial-hero-image 18s ease-in-out infinite alternate; content: ''; }
+.testimonials-page-hero::before { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(23,39,30,.52), rgba(23,39,30,.4)), url('../assets/images/testimonialsimg.webp') center 62% / cover no-repeat; animation: testimonial-hero-image 18s ease-in-out infinite alternate; content: ''; }
 .testimonials-page-hero-copy { width: min(100%, 900px); position: relative; z-index: 1; text-align: center; animation: testimonial-copy-in .85s cubic-bezier(.2,.7,.2,1) both; }
 .testimonials-page-hero-copy .testimonials-eyebrow { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,.4); }
 .testimonials-eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 16px; color: var(--testimonial-gold); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }

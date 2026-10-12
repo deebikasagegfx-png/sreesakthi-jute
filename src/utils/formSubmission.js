@@ -23,6 +23,9 @@ export async function submitWebsiteForm({ formName, pageName, fields }) {
       code: result.code || 'FORM_API_ERROR',
       diagnostic: result.diagnostic || result.message || 'The form API returned an error without details.',
     })
+    if (result.code === 'FORM_REQUIRES_ACTIVATION') {
+      throw new Error('Form delivery is awaiting activation. Open the FormSubmit activation email sent to ssjbjute@gmail.com, click “Activate Form,” then submit again.')
+    }
     throw new Error(formErrorMessage)
   }
 

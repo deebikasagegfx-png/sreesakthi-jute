@@ -1,8 +1,8 @@
-import naturalJuteRollsImage from '../assets/images/home-products/live-product-19.png'
-import fileFoldersImage from '../assets/images/home-products/live-product-20.png'
-import customizedJuteBagsImage from '../assets/images/home-products/live-product-21.png'
-import colouredFabricImage from '../assets/images/home-products/live-product-22.png'
-import fancyBagsImage from '../assets/images/home-products/live-product-23.png'
+import naturalJuteRollsImage from '../assets/images/home-products/live-product-19.webp'
+import fileFoldersImage from '../assets/images/home-products/live-product-20.webp'
+import customizedJuteBagsImage from '../assets/images/home-products/live-product-21.webp'
+import colouredFabricImage from '../assets/images/home-products/live-product-22.webp'
+import fancyBagsImage from '../assets/images/home-products/live-product-23.webp'
 
 const homeProducts = [
   { id: 'natural-jute-rolls', name: 'NATURAL JUTE ROLLS', image: naturalJuteRollsImage, route: '/jute-fabric-wholesale-market' },

@@ -105,7 +105,7 @@
 .hero-backgrounds {
   z-index: 0;
   overflow: hidden;
-  background: #26382d url("/images/Untitled-design-34.png") center / cover no-repeat;
+  background: #26382d url("/assets/images/Untitled-design-34.webp") center / cover no-repeat;
 }
 .hero-background {
   background-position: center;
@@ -113,9 +113,9 @@
   opacity: 0;
   animation: hero-background-cycle 15s ease-in-out infinite;
 }
-.hero-background-one { background-image: url("/images/Untitled-design-34.png"); animation-delay: 0s; }
-.hero-background-two { background-image: url("/images/Untitled-design-33.png"); animation-delay: 5s; }
-.hero-background-three { background-image: url("/images/Untitled-design-35.png"); animation-delay: 10s; }
+.hero-background-one { background-image: url("/assets/images/Untitled-design-34.webp"); animation-delay: 0s; }
+.hero-background-two { background-image: url("/assets/images/Untitled-design-33.webp"); animation-delay: 5s; }
+.hero-background-three { background-image: url("/assets/images/Untitled-design-35.webp"); animation-delay: 10s; }
 
 @keyframes hero-background-cycle {
   0% { opacity: 1; transform: scale(1); }

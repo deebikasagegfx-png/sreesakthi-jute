@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowLeft, ArrowUpRight, Check, Leaf, PackageCheck, Recycle, ShoppingBag } from 'lucide-react'
 import RelatedPostsAndComments from '../components/RelatedPostsAndComments'
-import handbagHeroImage from '../assets/images/removesen3.jpg'
+import handbagHeroImage from '../assets/images/removesen3.webp'
 import '../styles/blog-article.css'
 
 const articleSections = [

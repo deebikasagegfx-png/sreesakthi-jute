@@ -2,7 +2,7 @@ import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Leaf } from 'lucide-rea
 import RelatedPostsAndComments from '../components/RelatedPostsAndComments'
 import '../styles/blog-article.css'
 
-const ecoFriendlyHeroImage = '/images/Header-image.jpg'
+const ecoFriendlyHeroImage = '/assets/images/Header-image.webp'
 
 const benefits = [
   ['Sustainable', 'Completely biodegradable and renewable'],

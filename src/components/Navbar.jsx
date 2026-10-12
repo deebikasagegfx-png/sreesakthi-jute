@@ -8,7 +8,7 @@ import { FaFacebookF, FaWhatsapp, FaInstagram } from "react-icons/fa";
 const links = [
   { label: 'Our story', href: '/#about' },
   { label: 'Products', href: '/products', dropdown: true },
-  { label: 'How it’s made', href: '/#process' },
+  { label: 'How itâ€™s made', href: '/#process' },
   { label: 'Kind words', href: '/#reviews' },
 ]
 
