@@ -52,11 +52,11 @@
 .enquiry-form-wrap label { display: grid; gap: 4px; color: #263344; font-size: 13px; }
 .enquiry-form-wrap input, .enquiry-form-wrap textarea { width: 100%; max-width: 100%; min-width: 0; padding: 11px 14px; border: 1px solid #aeb4bd; border-radius: 3px; color: #222; background: #fff; font-size: 14px; }
 .enquiry-form-wrap textarea { min-height: 74px; resize: vertical; }
-.enquiry-form-wrap input:focus, .enquiry-form-wrap textarea:focus { outline: 2px solid #4aaa3f; outline-offset: 1px; }
-.enquiry-submit { min-height: 48px; margin-top: 1px; border: 0; border-radius: 4px; color: #fff; background: #4aaa3f; font-size: 15px; font-weight: 700; cursor: pointer; }
+.enquiry-form-wrap input:focus, .enquiry-form-wrap textarea:focus { outline: 2px solid #378D30; outline-offset: 1px; }
+.enquiry-submit { min-height: 48px; margin-top: 1px; border: 0; border-radius: 4px; color: #fff; background: #378D30; font-size: 15px; font-weight: 700; cursor: pointer; }
 .enquiry-submit:hover { background: #378d30; }
-.enquiry-form-status { margin: 0; color: #26382d; font-size: 12px; line-height: 1.5; }
-.enquiry-close:focus-visible, .enquiry-submit:focus-visible { outline: 3px solid #26382d; outline-offset: 2px; }
+.enquiry-form-status { margin: 0; color: #378D30; font-size: 12px; line-height: 1.5; }
+.enquiry-close:focus-visible, .enquiry-submit:focus-visible { outline: 3px solid #378D30; outline-offset: 2px; }
 
 @media (max-width: 700px) {
   .enquiry-backdrop { padding: 12px; }

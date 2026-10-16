@@ -82,7 +82,7 @@ icon links
 
 @media (max-width: 800px) {
   .site-header { height: 82px; min-height: 82px; }
-  .main-nav.is-open { z-index: 12; max-height: calc(100vh - 82px); max-height: calc(100dvh - 82px); overflow-y: auto; overscroll-behavior: contain; box-shadow: 0 14px 24px rgba(38, 56, 45, .12); }
+  .main-nav.is-open { z-index: 12; max-height: calc(100vh - 82px); max-height: calc(100dvh - 82px); overflow-y: auto; overscroll-behavior: contain; box-shadow: 0 14px 24px rgba(55, 141, 48, .12); }
 }
 
 @media (max-width: 580px) {

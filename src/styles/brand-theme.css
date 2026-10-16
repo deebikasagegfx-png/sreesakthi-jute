@@ -5,12 +5,12 @@
   --paper: #fff;
   --cream: #f6f6f6;
   --ink: #1e1e1e;
-  --green: #49ab3c;
-  --nav-green: #12ad2b;
-  --green-dark: #2f8623;
-  --orange: #12ad2b;
-  --button-jute: #12ad2b;
-  --button-jute-hover: #2f8623;
+  --green: #378D30;
+  --nav-green: #378D30;
+  --green-dark: #378D30;
+  --orange: #378D30;
+  --button-jute: #378D30;
+  --button-jute-hover: #378D30;
   --line: rgba(30, 30, 30, .14);
 }
 
@@ -98,10 +98,10 @@ body :is(h1, h2, h3, h4, h5, h6) {
   box-shadow: none;
 }
 .home-page .sustainability-copy { padding: 48px 5.5% 48px 6.7%; }
-.home-page .sustainability-eyebrow { color: #00ad31; font-size: 20px; font-weight: 500; letter-spacing: 0; }
+.home-page .sustainability-eyebrow { color: #378D30; font-size: 20px; font-weight: 500; letter-spacing: 0; }
 .home-page .sustainability-copy h2 { color: #b29b75; font-size: clamp(38px, 4vw, 50px); line-height: 1.22; }
 .home-page .sustainability-benefits { font-size: clamp(17px, 1.55vw, 22px); }
-.home-page .sustainability-check { background: #0eae32; }
+.home-page .sustainability-check { background: #378D30; }
 .home-page .sustainability-image { width: min(100% - 40px, 506px); height: clamp(460px, 40.3vw, 550px); margin: 0 8% 0 0; border: 0; border-radius: 0; box-shadow: none; }
 .home-page .sustainability-image img { object-fit: contain; }
 @media (max-width: 800px) {
@@ -117,8 +117,8 @@ body :is(h1, h2, h3, h4, h5, h6) {
   .home-page .sustainability-benefits { font-size: 14px; }
   .home-page .sustainability-image { width: calc(100% - 40px); height: 62vw; min-height: 240px; margin: 0 20px 20px; }
 }
-.home-page .facility-title { color: #626b2c; font-size: clamp(25px, 2.8vw, 34px); }
-.home-page .facility-card { background: #626b2c; }
+.home-page .facility-title { color: #378D30; font-size: clamp(25px, 2.8vw, 34px); }
+.home-page .facility-card { background: #378D30; }
 .home-page .fabric-options-heading > span,
 .home-page .fabric-color-choice:focus-visible { color: var(--green-dark); }
 .home-page .review-card { border: 1px solid rgba(30, 30, 30, .1); }
@@ -131,7 +131,7 @@ body :is(h1, h2, h3, h4, h5, h6) {
 }
 
 .main-nav > a:not(.nav-contact):hover {
-  color: #078b20;
+  color: #378D30;
 }
 
 .main-nav .nav-contact {
@@ -143,7 +143,7 @@ body :is(h1, h2, h3, h4, h5, h6) {
 
 .main-nav .nav-contact:hover {
   color: #fff;
-  background: #078b20;
+  background: #378D30;
 }
 
 .main-nav > a:not(.nav-contact) {
@@ -156,7 +156,7 @@ body :is(h1, h2, h3, h4, h5, h6) {
 .main-nav > a:not(.nav-contact):focus-visible {
   color: #fff;
   background: var(--nav-green);
-  box-shadow: 0 5px 12px rgba(13, 181, 44, .22);
+  box-shadow: 0 5px 12px rgba(55, 141, 48, .22);
   transform: translateY(-2px) scale(1.03);
 }
 
@@ -357,12 +357,12 @@ body :is(h1, h2, h3, h4, h5, h6) {
   font-size: 20px;
   font-weight: 700;
 }
-.home-page .about-years strong { color: #00c896; font-size: 33px; }
+.home-page .about-years strong { color: #378D30; font-size: 33px; }
 .home-page .about-eyebrow {
   margin: 0 0 14px;
   padding: 0;
   border-radius: 0;
-  color: #08ad34;
+  color: #378D30;
   background: transparent;
   font-size: 20px;
   font-weight: 400;

@@ -5,7 +5,7 @@
   .menu-toggle { display: grid; place-items: center; border: 0; padding: 8px; color: var(--ink); background: transparent; cursor: pointer; }
   .main-nav { display: none; position: absolute; top: 100%; right: 0; left: 0; align-items: stretch; flex-direction: column; gap: 0; padding: 8px 4% 17px; background: var(--paper); border-bottom: 1px solid var(--line); }
   .main-nav.is-open { display: flex; }
-  .main-nav a { padding: 13px 0; border-bottom: 1px solid rgba(38, 56, 45, .1); }
+  .main-nav a { padding: 13px 0; border-bottom: 1px solid rgba(55, 141, 48, .1); }
 }
 
 @media (max-width: 800px) {

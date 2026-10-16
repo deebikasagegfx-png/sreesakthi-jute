@@ -43,14 +43,14 @@
 .contact-page-form input, .contact-page-form textarea { width: 100%; min-height: 43px; padding: 0 12px; border: 1px solid #ded9cc; border-radius: 3px; outline: 0; color: #293a30; background: #fbfaf5; font: inherit; font-size: 12px; transition: border-color .2s, box-shadow .2s; }
 .contact-page-form textarea { min-height: 90px; padding-top: 11px; resize: vertical; }
 .contact-page-form input::placeholder { color: #a5a597; }
-.contact-page-form input:focus { border-color: #71805b; box-shadow: 0 0 0 3px rgba(104,118,71,.12); }
-.contact-page-form textarea:focus { border-color: #71805b; box-shadow: 0 0 0 3px rgba(104,118,71,.12); }
+.contact-page-form input:focus { border-color: #378D30; box-shadow: 0 0 0 3px rgba(104,118,71,.12); }
+.contact-page-form textarea:focus { border-color: #378D30; box-shadow: 0 0 0 3px rgba(104,118,71,.12); }
 .contact-page-form button { min-height: 48px; display: inline-flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 2px; padding: 0 17px; border: 0; color: white; background: var(--button-jute); font: inherit; font-size: 10px; font-weight: 800; cursor: pointer; transition: background .2s, transform .2s; }
 .contact-page-form button:hover { transform: translateY(-2px); background: var(--button-jute-hover); }
 .contact-page-form button:disabled, .article-comment-submit:disabled, .enquiry-submit:disabled { cursor: wait; opacity: .72; }
 .contact-page-form button:focus-visible, .contact-scroll-link:focus-visible, .contact-info-card:focus-visible { outline: 3px solid #ad8354; outline-offset: 3px; }
 .contact-form-note { display: flex; align-items: center; gap: 8px; margin: -7px 0 0; color: #e1e4d9; font-size: 8px; }
-.contact-form-note span { width: 6px; height: 6px; background: #71805b; }
+.contact-form-note span { width: 6px; height: 6px; background: #378D30; }
 .contact-map-section { width: min(100% - 12%, 1300px); margin: 0 auto 75px; overflow: hidden; border: 1px solid #e5dfd0; background: #fffdf8; }
 .contact-map-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 11px 20px; padding: 17px 22px; }
 .contact-map-heading > span { display: inline-flex; align-items: center; gap: 7px; color: #74804e; font-size: 9px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }

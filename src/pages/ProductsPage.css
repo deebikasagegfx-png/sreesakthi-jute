@@ -42,11 +42,11 @@
 .products-index-page .products-title { margin: 0; color: #111; font-family: inherit; font-size: clamp(30px, 3.2vw, 40px); font-weight: 700; letter-spacing: 0; text-align: center; }
 .products-index-page .product-category-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; width: min(100% - 32px, 1200px); margin: 54px auto 15px; padding: 0; overflow: visible; }
 .products-index-page .product-category-tabs button,
-.products-index-page .product-category-tabs button:nth-child(odd) { min-height: 40px; flex: 0 0 auto; padding: 0 25px; border: 0; border-radius: 0; color: #fff; background: #626b2d; font-family: inherit; font-size: 12px; font-weight: 700; text-align: center; }
+.products-index-page .product-category-tabs button:nth-child(odd) { min-height: 40px; flex: 0 0 auto; padding: 0 25px; border: 0; border-radius: 0; color: #fff; background: #378D30; font-family: inherit; font-size: 12px; font-weight: 700; text-align: center; }
 .products-index-page .product-category-tabs button.is-active,
-.products-index-page .product-category-tabs button.is-active:nth-child(odd) { color: #fff; background: #13ae32; box-shadow: none; }
+.products-index-page .product-category-tabs button.is-active:nth-child(odd) { color: #fff; background: #378D30; box-shadow: none; }
 .products-index-page .product-category-tabs button::before { display: none; }
-.products-index-page .product-category-tabs button:hover { background: #13ae32; transform: translateY(-1px); }
+.products-index-page .product-category-tabs button:hover { background: #378D30; transform: translateY(-1px); }
 .products-index-page .product-fabric-quote { min-height: 156px; width: calc(100% - 32px); margin: 15px auto 28px; padding: 24px clamp(24px, 16vw, 250px); border: 0; border-radius: 0; box-shadow: none; font-size: clamp(14px, 1.2vw, 16px); line-height: 1.55; }
 .products-index-page .product-fabric-quote::before { display: none; }
 .products-index-page .product-fabric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3.8vw, 52px); width: min(100% - 40px, 1045px); margin: 0 auto; }

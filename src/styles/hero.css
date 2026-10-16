@@ -6,7 +6,7 @@
   padding: clamp(56px, 9vh, 90px) 6% 24px;
   box-sizing: border-box;
 
-  background-color: #26382d;
+  background-color: #378D30;
   background-image: none;
   color: white;
   overflow: visible;
@@ -40,7 +40,7 @@
 }
 
 .hero-text h1 span {
-  color: #0db52c;
+  color: #378D30;
 }
 
 .hero-text p {
@@ -105,7 +105,7 @@
 .hero-backgrounds {
   z-index: 0;
   overflow: hidden;
-  background: #26382d url("/assets/images/Untitled-design-34.webp") center / cover no-repeat;
+  background: #378D30 url("/assets/images/Untitled-design-34.webp") center / cover no-repeat;
 }
 .hero-background {
   background-position: center;
@@ -380,14 +380,14 @@
   .hero {
     isolation: isolate;
     overflow: hidden;
-    background-color: #17251c;
+    background-color: #378D30;
   }
 
   .hero-backgrounds {
     right: 0;
     bottom: auto;
     height: clamp(420px, 78vw, 560px);
-    background: #17251c;
+    background: #378D30;
   }
 
   .hero-background {
@@ -408,6 +408,6 @@
     right: 0;
     bottom: auto;
     height: clamp(420px, 78vw, 560px);
-    background: linear-gradient(180deg, rgba(0,0,0,.34) 0%, rgba(0,0,0,.48) 66%, #17251c 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,.34) 0%, rgba(0,0,0,.48) 66%, #378D30 100%);
   }
 }

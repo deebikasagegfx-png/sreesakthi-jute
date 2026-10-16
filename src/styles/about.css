@@ -128,7 +128,7 @@
 .comparison-label-before { left: 14px; }
 .comparison-label-after { right: 14px; }
 .comparison-control { position: absolute; z-index: 3; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; }
-.comparison-control:focus-visible { outline: 3px solid #0db52c; outline-offset: -3px; opacity: .01; }
+.comparison-control:focus-visible { outline: 3px solid #378D30; outline-offset: -3px; opacity: .01; }
 
 @media (max-width: 800px) {
   .green-jute-title { margin-bottom: 38px; }
@@ -154,7 +154,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #263b30;
+  background: #378D30;
   color: #fff;
   text-align: center;
 }
@@ -189,7 +189,7 @@
   padding: clamp(24px, 4vw, 48px);
   background: #fff;
   color: #171717;
-  border: 1px solid rgba(38, 56, 45, .08);
+  border: 1px solid rgba(55, 141, 48, .08);
   border-radius: 16px;
   box-shadow: 0 16px 42px rgba(26, 39, 29, .1);
 }
@@ -244,13 +244,13 @@
   font-weight: 700;
 }
 
-.about-years strong { color: #00c896; font-size: 32px; }
+.about-years strong { color: #378D30; font-size: 32px; }
 .about-showcase-copy { padding: 6px 0 0; }
-.about-eyebrow { width: fit-content; margin: 0 0 14px; padding: 7px 13px; border-radius: 4px; background: #eff9ef; color: #00ad31; font-size: 16px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.about-eyebrow { width: fit-content; margin: 0 0 14px; padding: 7px 13px; border-radius: 4px; background: #eff9ef; color: #378D30; font-size: 16px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 .about-showcase-copy h2 { max-width: 700px; margin: 0 0 14px; color: #b29b75; font-family: 'Poppins', sans-serif; font-size: clamp(38px, 4.5vw, 60px); font-weight: 800; line-height: 1.16; letter-spacing: -1.2px; }
 .about-description { max-width: 590px; margin: 0 0 49px; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 1.8; }
 .about-description strong { font-weight: 700; }
-.about-description span { color: #00ad31; }
+.about-description span { color: #378D30; }
 .about-button { display: inline-flex; min-width: 127px; min-height: 48px; align-items: center; justify-content: center; padding: 0 20px; border-radius: 5px; background: var(--button-jute); color: white; font-size: 14px; font-weight: 700; }
 .about-button:hover { background: var(--button-jute-hover); }
 

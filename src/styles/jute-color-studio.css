@@ -1,29 +1,29 @@
-.jute-color-studio { padding: 74px 8% 84px; overflow: hidden; color: #21382e; background: #fff; }
+.jute-color-studio { padding: 74px 8% 84px; overflow: hidden; color: #378D30; background: #fff; }
 .jute-color-studio-heading { margin: 0 auto 36px; text-align: center; }
 .jute-color-studio-heading .eyebrow { justify-content: center; margin-bottom: 9px; color: #a66b3d; font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
 .jute-color-studio-heading h2 { margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(35px, 4.5vw, 56px); font-weight: 500; letter-spacing: -.04em; }
-.jute-color-studio-heading h2 em { color: #687b39; font-weight: 500; }
+.jute-color-studio-heading h2 em { color: #378D30; font-weight: 500; }
 .jute-color-studio-heading > p:last-child { margin: 8px 0 0; color: #7a8077; font-size: 12px; }
 .jute-color-studio-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); align-items: center; gap: clamp(30px, 5vw, 64px); width: min(100%, 1120px); margin: 0 auto; }
 .jute-color-preview { min-height: 420px; position: relative; overflow: hidden; background: #eee8dc; box-shadow: 0 20px 45px rgba(35,48,39,.15); animation: color-preview-arrive .7s cubic-bezier(.2,.7,.2,1) both; }
 .jute-color-preview > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: color-image-in .65s ease both; }
 .jute-color-count { position: absolute; top: 15px; right: 15px; padding: 7px 10px; color: #fff; background: rgba(28,40,31,.78); font-size: 9px; font-weight: 700; letter-spacing: .1em; }
 .jute-color-caption { position: absolute; right: 18px; bottom: 18px; left: 18px; display: grid; gap: 5px; padding: 14px 16px; background: rgba(255,253,248,.92); box-shadow: 0 8px 22px rgba(22,31,24,.12); }
-.jute-color-caption small { color: #687b39; font-size: 8px; font-weight: 800; letter-spacing: .13em; }
-.jute-color-caption strong { color: #263b30; font-family: 'Fraunces', Georgia, serif; font-size: 20px; font-weight: 500; }
+.jute-color-caption small { color: #378D30; font-size: 8px; font-weight: 800; letter-spacing: .13em; }
+.jute-color-caption strong { color: #378D30; font-family: 'Fraunces', Georgia, serif; font-size: 20px; font-weight: 500; }
 .jute-color-controls { animation: color-copy-arrive .7s .12s cubic-bezier(.2,.7,.2,1) both; }
 .jute-color-kicker { margin: 0 0 12px; color: #a66b3d; font-size: 9px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
-.jute-color-controls h3 { margin: 0; color: #21382e; font-family: 'DM Sans', Arial, sans-serif; font-size: clamp(30px, 3.2vw, 43px); font-weight: 750; letter-spacing: -.045em; line-height: 1.08; }
+.jute-color-controls h3 { margin: 0; color: #378D30; font-family: 'DM Sans', Arial, sans-serif; font-size: clamp(30px, 3.2vw, 43px); font-weight: 750; letter-spacing: -.045em; line-height: 1.08; }
 .jute-color-description { max-width: 420px; margin: 14px 0 18px; color: #71796f; font-size: 12px; line-height: 1.7; }
 .jute-natural-option { display: flex; align-items: center; gap: 12px; margin-bottom: 17px; }
 .jute-natural-option img { width: 58px; height: 52px; object-fit: cover; }
 .jute-natural-option span { display: grid; gap: 4px; }
-.jute-natural-option strong { color: #344839; font-size: 10px; }
+.jute-natural-option strong { color: #378D30; font-size: 10px; }
 .jute-natural-option small { color: #9a9e95; font-size: 8px; letter-spacing: .08em; }
 .jute-color-swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
-.jute-color-swatches button { min-width: 0; padding: 4px; overflow: hidden; border: 1px solid transparent; border-radius: 3px; color: #344839; background: #f4f1e9; cursor: pointer; transition: transform .22s, border-color .22s, box-shadow .22s; }
+.jute-color-swatches button { min-width: 0; padding: 4px; overflow: hidden; border: 1px solid transparent; border-radius: 3px; color: #378D30; background: #f4f1e9; cursor: pointer; transition: transform .22s, border-color .22s, box-shadow .22s; }
 .jute-color-swatches button:hover { transform: translateY(-3px); box-shadow: 0 8px 16px rgba(35,48,39,.12); }
-.jute-color-swatches button.is-selected { border-color: #687b39; box-shadow: 0 0 0 2px rgba(104,123,57,.15); }
+.jute-color-swatches button.is-selected { border-color: #378D30; box-shadow: 0 0 0 2px rgba(104,123,57,.15); }
 .jute-color-swatches img { display: block; width: 100%; aspect-ratio: 1.55; object-fit: cover; }
 .jute-color-swatches button span { display: block; overflow: hidden; padding: 5px 2px 2px; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
 .jute-color-finishes { display: flex; align-items: center; gap: 9px; margin: 14px 0 0; padding-top: 9px; border-top: 1px solid #e8e4d9; color: #70776d; font-size: 9px; }
